@@ -1,10 +1,11 @@
-import elder from './img/elder.jpg'
-import bufft from './img/buffet.jpg'
-import oneil from './img/oneil.jpg'
-import seykota from './img/seykota.jpg'
+import mark from './img/testimoniala.png'
+import jenifer from './img/testimonialb.png'
+import ernest from './img/testimonialc.png'
+import steven from './img/testimoniald.png'
 import laser from './img/join1.png'
 import superior from './img/join2.png'
 import trandingApp from './img/join3.png'
+
 
 export const dk = {
 
@@ -75,22 +76,22 @@ export const dk = {
     mem_subtitle: 'Der er mange store navne indenfor trading. Her er hvad nogle af de mest berømte tradere havde at sige.',
     mems: [
         {
-            img: elder,
+
             name: 'Alexander Elder',
             text: 'Du kan være fri. Du kan bo og arbejde hvor som helst i verden. Du kan være uafhængig af rutiner og slippe for at stå til ansvar overfor nogen.'
         },
         {
-            img: seykota,
+
             name: 'Ed Seykota',
             text: 'Alle får det de vil have ud af markedet, uanset om de vinder eller taber. Nogle mennesker ser ud til at kunne lide at tabe, så de vinder ved at tabe penge.'
         },
         {
-            img: oneil,
+
             name: 'William O’Neil',
             text: 'Det der ser ud til at være for højt og risikabelt for flertallet, går generelt højere, og det der ser lavt og billigt ud, går generelt lavere.'
         },
         {
-            img: bufft,
+
             name: 'Warren Buffett',
             text: 'Du behøver ikke at være raketforsker. Investering er ikke et spil, hvor fyren med en IQ på 160 slår fyren med en IQ på 130.'
         },
@@ -170,6 +171,60 @@ export const en = {
             text: 'The Bitcoin Evolution app has won a number of awards. The most recent award we have had the honor of receiving is getting #1 in the trading software category for the US Trading Association.'
         },
     ],
+    review_title: 'Hear From Our Members Who Rely On Our Software To Fund Their Luxury Lifestyles',
+    review_body:[
+        {
+            img: mark,
+            name: 'Mark K.',
+            place: 'Fort Worth, TX',
+            text: '"I\'ve been a member of the Bitcoin Evolution for only 47 days. But my life has already changed! Not only have I made my first $10K, but I\'ve also met some of the most incredible people in the process. Thanks, Bitcoin Evolution!"'
+        },
+        {
+            img: jenifer,
+            name: 'Jennifer A.',
+            place: 'Irvine, CA',
+            text: '"I finally know what it’s like to live the dream. I no longer feel like I’m on the outside looking in while everyone else has all the fun. The Bitcoin Evolutionhas allowed me to retire early and live the 1% lifestyle."'
+        },
+        {
+            img: ernest,
+            name: 'Ernest I.',
+            place: 'Orem, UT',
+            text: '"Surprisingly, I used to be an investor on Wall Street. And I’ve never seen anything like this in my 10 year tenure at the company. My colleagues all thought I was crazy when I quit the firm to invest with the Bitcoin Evolution software full-time. $38,459 in profits later, all of my colleagues are now BEGGING me to let them in."'
+        },
+        {
+            img: steven,
+            name: 'Steven H.',
+            place: 'Niagara Falls, NY',
+            text: '"Two weeks ago, I got laid off. With no options left, I thought my life was over. Now I’m making over $1,261.42 each and every day. And for the first time in 2 months, my account isn’t overdrawn. Thanks, Bitcoin Evolution!"'
+        },
+    ],
+    how_it_works_title: 'How It Works',
+    how_it_works_information: [
+        {
+            img: ernest,
+            title: [
+                'Fill Out The Registration',
+                'Form on This Page'
+            ],
+            description: 'Once your registration is accepted, you will automatically become the newest member of The Bitcoin Evolution. This means you will get to claim our proprietary bitcoin trading software for free.'
+        },
+        {
+            img: ernest,
+            title: [
+                'Fill Out The Registration',
+                'Form on This Page'
+            ],
+            description: 'Once your registration is accepted, you will automatically become the newest member of The Bitcoin Evolution. This means you will get to claim our proprietary bitcoin trading software for free.'
+        },
+        {
+            img: ernest,
+            title: [
+                'Fill Out The Registration',
+                'Form on This Page'
+            ],
+            description: 'Once your registration is accepted, you will automatically become the newest member of The Bitcoin Evolution. This means you will get to claim our proprietary bitcoin trading software for free.'
+        }
+    ],
     qna_title: 'FAQ',
     qna_subtitle: 'Here are the most common questions with our answers.',
     qna: [
@@ -202,22 +257,22 @@ export const en = {
     mem_subtitle: 'There are a lot of big names in trading. Here is what some of the most famous traders have to say.',
     mems: [
         {
-            img: elder,
+
             name: 'Alexander Elder',
             text: 'You can be free. You can live and work anywhere in the world. You can be independent from routine and not answer to anybody.'
         },
         {
-            img: seykota,
+
             name: 'Ed Seykota',
             text: 'Win or lose, everybody gets what they want out of the market. Some people seem to like to lose, so they win by losing money.'
         },
         {
-            img: oneil,
+
             name: 'William O’Neil',
             text: 'What seems too high and risky to the majority generally goes higher and what seems low and cheap generally goes lower.'
         },
         {
-            img: bufft,
+
             name: 'Warren Buffett',
             text: 'You don\'t need to be a rocket scientist. Investing is not a game where the guy with the 160 IQ beats the guy with 130 IQ.'
         },
