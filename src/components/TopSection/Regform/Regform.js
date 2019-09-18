@@ -6,9 +6,7 @@ import 'react-intl-tel-input/dist/main.css'
 
 import * as errorMessage from '../../../helpers/errorMessage'
 
-import { ReactComponent as Check } from './check.svg'
 import { ReactComponent as Mark } from './excl.svg'
-import lock from './lock.svg'
 import logo from '../../BottomSection/bcprofitmin.svg'
 
 
@@ -42,12 +40,6 @@ export default class Regform extends Component {
         // Step 1
         if (form.classList.contains('one')) {
 
-            if(!form.querySelector('.accept').checked && !this.state.check) {
-                errorMessage.errorMessage(form.querySelector('.required'), 'Please accept this if you want to proceed');
-            } else {
-                values[3] = true;
-            }
-
             let inputs = [...form.querySelectorAll('.inputfield')];
 
             inputs.map((input, index) => {
@@ -71,12 +63,11 @@ export default class Regform extends Component {
                     }
                 }
 
-                if (values[0] && values[1] && values[2] && values[3]) {
+                if (values[0] && values[1] && values[2]) {
                     this.setState({
                         fname: values[0],
                         lname: values[1],
                         email: values[2],
-                        check: values[3]
                     }, () => {
                         if(window.sbidTracking){
                             window.sbidTracking.settings.params.email = this.state.email;
@@ -208,7 +199,7 @@ export default class Regform extends Component {
                         {[1,2,3].map(index => {
                             if(index <= this.props.step-1) {
                                 return (
-                                    <div className="num check" key={index} index={index} onClick={this.handleBackwards}><Check className="checksvg"/></div>
+                                    <div className="num check" key={index} index={index} onClick={this.handleBackwards}>✓</div>
                                 )
                             } else {
                                 return (
@@ -222,16 +213,7 @@ export default class Regform extends Component {
                             <input className="inputfield fname" type="text" name="fname" placeholder={version.fname} onChange={this.handleFirstStepChange}/>
                             <input className="inputfield lname" type="text" name="lname" placeholder={version.lname} onChange={this.handleFirstStepChange}/>
                             <input className="inputfield email" type="text" name="email" placeholder={version.email} autoComplete='off' onChange={this.handleFirstStepChange}/>
-                            <div className='agreement'>
-                                <input type="checkbox" name="agree_one" />
-                                <span>{version.req1[0]} <a onClick={() => this.props.pageHandler('privacy')}>{version.req1[1]}</a></span>
-                            </div>
-                            <div className='agreement required'>
-                                <input type="checkbox" className='accept' name="agree_two" />
-                                <span>{version.req2[0]} <a onClick={() => this.props.pageHandler('terms')}>{version.req2[1]}</a>{version.req2[2]}<a onClick={() => this.props.pageHandler('privacy')}>{version.req2[3]}</a>{version.req2[4]}</span>
-                            </div>
                             <button onClick={this.handleForward.bind(this)} className='start'>{version.button}</button>
-                            <div className="bottominfo"><img src={lock} alt="lock"/>{version.bottominfo}<div className="more" onMouseOver={() => this.infoBox.current.style.opacity = "1"} onMouseOut={() => this.infoBox.current.style.opacity = "0"} >{version.more}</div><div className="morebox" ref={this.infoBox}>{version.morebox}</div></div>
                         </div>
                         <div className='form-wrapper two'>
                             <input className="inputfield pass" type="password" maxLength="10" onChange={validateInput.checkInput} name="password" placeholder={version.pass}/>

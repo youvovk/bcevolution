@@ -64,14 +64,13 @@ export default class TopSection extends Component {
                             </div>
                             <div className="col-md-4 col-sm-5">
                                 <div className="regform" ref={this.regPanel}>
-                                    <div className="reg-title"><span>{version.topreg1}</span><br/>{version.topreg2}<br/>{version.topreg3}</div>
+                                    <div className="reg-title"><span>{version.topreg1}</span><br/>{version.topreg2}</div>
                                     <Regform handlePassSync={this.props.handlePassSync} form={this.props.form} pageHandler={this.props.pageHandler} countryCode={this.props.countryCode} version={this.props.version} handleStep={this.props.handleStep} handleForward={this.props.handleForward} handleSubmit={this.props.handleSubmit} step={this.props.step}/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <img src={badges} alt="badges" className="badges"/>
             </div>
         )
     }

@@ -1,30 +1,7 @@
 .Regform {
+    padding: 50px 20px 5px 20px;
     position: relative;
-    z-index: 10;
-    border-width: 0.05vw;
-    border-color: #e0e0e0;
-    border-style: solid;
-    background-color: #fff;
-    box-shadow: 0 0.4vw 0.8vw 0 rgba(0,0,0,.15);
-    padding: 1vw 1.2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-top: 0.32vw solid #d65000;
-    font-family: 'Open Sans', sans-serif;
-    text-align: left;
-    color: #333;
-    min-height: 22vw;
-
-    @media (max-width: 1200px) {
-        min-height: 26vw;
-    }
-
-    @media (max-width: 768px) {
-        text-align: center;
-        border-top: 1.32vw solid #d65000;
-        padding: 28vw 4.2vw 3vw 4.2vw;
-    }
+    background: #ffffff;
 
     & .inner {
         display: flex;
@@ -38,14 +15,9 @@
         display: flex;
         flex-direction: column;
         min-width: 100%;
+        height: auto;
         transition: margin 0.3s ease-out;
-        height: 20vw;
         justify-content: center;
-
-
-        @media (max-width: 1200px) {
-            height: 24vw;
-        }
 
         @media (max-width: 768px) {
             height: auto;
@@ -65,20 +37,10 @@
             white-space: nowrap;
             overflow: hidden;
             font-weight: 600;
-            font-size: 0.82vw;
-            margin: 0.8vw 0;
-            color: red;
-
-            @media (max-width: 1200px) {
-                font-size: 1vw;
-            }
-    
-            @media (max-width: 768px) {
-                font-size: 4vw;
-                text-align: left;
-                margin: 1.8vw 0;
-            }
-
+            font-size: .8em;
+            margin-top: 10px;
+            color: #3b3b3b;
+            line-height: 1;
             &:before {
                 content: url('./times.svg');
                 width: 0.4vw;
@@ -119,106 +81,52 @@
     }
 
     & .steps {
-        width: 76%;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin-bottom: 0.5vw;
-
-        @media (max-width: 768px) {
-            margin-bottom: 2vw;
-        }
+        position: absolute;
+        top: -25px;
+        left: 0;
+        right: 0;
 
         & .num {
-            background-color: #fff;
-            height: 1.4vw;
-            width: 1.4vw;
+            padding: 7px;
+            width: 45px;
+            height: 45px;
             text-align: center;
-            color: #2ba6df;
-            font-size: 1vw;
-            font-weight: 700;
-            border: 1px solid lightgrey;
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
             border-radius: 50%;
-            line-height: 1.4;
-
-            @media (max-width: 1200px) {
-                height: 2.4vw;
-                width: 2.4vw;
-                font-size: 1.6vw;
-            }
-    
-            @media (max-width: 768px) {
-                height: 6.4vw;
-                width: 6.4vw;
-                font-size: 4.5vw;
-                line-height: 1.38;
-            }
+            color: #6d6d6d;
+            background: linear-gradient(to bottom, #e4e4e4 0%, #c6c7c6 100%);
+            border: 1px #cdcdcd solid;
+            font-weight: 700;
 
             &.check {
-                cursor: pointer;
-                background-color: #2ba6df;
-                color: #fff;
-                border: none;
-
-                & .checksvg {
-                    pointer-events: none;
-                    width: 65%;
-                    height: 75%;
-                    margin: 0.2vw;
-                    fill: #fff !important;
-
-                    @media (max-width: 1200px) {
-                        margin: 0.3vw;
-                    }
-
-                    @media (max-width: 768px) {
-                        margin: 0.8vw;
-                    }
-                }
+                background: linear-gradient(to bottom, #740d92 0%, #01ba01 100%);
+                color: #ffffff;
+                border-color: #08d908;
+                text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.35);
             }
         }
     }
 
     .inputfield {
-        border: 1px solid #dfdfdf;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        color: #333;
-        border-radius: 0.2vw;
-        margin: 0.4vw 0;
-        font-size: 1vw;
-        padding: 0.2vw 0.6vw;
-        box-shadow: 0 3px 0 rgba(0,0,0,.05) inset;
-        padding-left: 2vw;
-        height: 2vw;
-        background-image: url('./icons.svg');
-        background-size: 2vw 24vw;
-        background-repeat: no-repeat;
-        transition: background-color 100ms linear,border 50ms linear;
-        background-position: 0 -0.11vw;
-
-        @media (max-width: 1200px) {
-            background-position: 0 -1.34vw;
-            margin: 0.4vw 0;
-            font-size: 1.4vw;
-            padding: 0.8vw 1.2vw;
-            padding-left: 2.8vw;
-            height: 2.8vw;
-            background-size: 2.8vw 36vw;
-        }
-
-        @media (max-width: 768px) {
-            border-radius: 1vw;
-            margin: 0.8vw 0;
-            font-size: 4.8vw;
-            padding-left: 12vw;
-            height: 12vw;
-            background-size: 12vw 144vw;
-            background-position: 0 0vw;
-            line-height: 1.2;
-        }
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        margin-bottom: 15px;
+        height: 40px;
 
         &::placeholder {
             color: #ccc;
@@ -266,33 +174,9 @@
 
         &:focus {
             border-color: #66afe9;
-            background-color: #f2fafd;
             outline: 0;
-            box-shadow: inset 0 0.2vw 0.2vw rgba(0,0,0,.09);
-        
-            &.fname,&.lname {
-                background-position: 0 -11.9vw;
-
-                @media (max-width: 1200px) {
-                    background-position: 0 -18.1vw;
-                }
-    
-                @media (max-width: 768px) {
-                    background-position: 0 -83.5vw;
-                }
-            }
-
-            &.email {
-                background-position: 0 -19.9vw;
-
-                @media (max-width: 1200px) {
-                    background-position: 0 -29.3vw;
-                }
-    
-                @media (max-width: 768px) {
-                    background-position: 0 -119.5vw;
-                }
-            }
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
 
             &.pass {
                 background-position: 0 -21.9vw; 
@@ -374,30 +258,34 @@
     }
 
     & .start {
-        font-size: 2em;
-        color: #ffffff;
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        padding: 0.72vw 1vw;
-        border-radius: 0.32vw;
-        background-color: #2ba6df;
-        border-color: #2ba6df;
-        box-shadow: 0 3px 0 #1978a5;
+        font-family: 'Oswald', sans-serif;
+        font-size: 24px;
+        color: white;
+        text-shadow: 0.5px 0.866px 0px rgba(1, 198, 0, 0.35);
+        border-radius: 4px;
         text-transform: uppercase;
-        white-space: normal;
-        border-image: none;
-        margin: 0.2vw 0;
-
-        @media (max-width: 768px) {
-            font-size: 2em;
-            padding: 3.72vw 4vw;
-            border-radius: 1.32vw;
-        }
+        padding: 8px 25px;
+        width: 100%;
+        background: #ffaf38;
+        background: linear-gradient(to bottom, #a110cb 0%, #740d92 100%);
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
 
         &:hover {
-            filter: brightness(110%);
-            cursor: pointer;
+            color: #201e1f;
+            background: linear-gradient(to bottom, #740d92 0%, #a110cb 100%);
+
         }
     }
 
@@ -519,7 +407,7 @@
     }
 
     .intl-tel-input.allow-dropdown.separate-dial-code .selected-dial-code {
-        padding-left: 1.4vw;
+        padding-left: 0;
         font-family: 'Open Sans', sans-serif;
         font-size: 1vw;
         font-weight: 400;

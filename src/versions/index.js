@@ -2,6 +2,9 @@ import elder from './img/elder.jpg'
 import bufft from './img/buffet.jpg'
 import oneil from './img/oneil.jpg'
 import seykota from './img/seykota.jpg'
+import laser from './img/join1.png'
+import superior from './img/join2.png'
+import trandingApp from './img/join3.png'
 
 export const dk = {
 
@@ -118,36 +121,55 @@ export const en = {
         'Eric Schmidt',
         ' have to say'
     ],
-    video: 'Tap to watch and learn the secret!',
-    topreg1: 'Sign Up Below',
-    topreg2: 'and we’ll guide you through',
-    topreg3: ' the process.',
+    topreg1: 'Start Changing',
+    topreg2: 'Your Life TODAY',
     fname: 'First name',
     lname: 'Last name',
     email: 'Email',
     pass: 'Password',
-    req1: [
-        'I agree to to the collection of my email address for the purposes of receiving commercial offers that we believe will be of interest to you on behalf of the companies and industries explicitly detailed in our',
-        'Privacy Policy.'
-    ],
-    req2: [
-        'I agree with the ',
-        'Terms & Conditions',
-        ' and ',
-        'Privacy Policy'
-    ],
-    button: 'Next',
-    button_last: 'Get Access Now',
+    pass2: 'Confirm Password',
+    button: 'Next >',
+    button_last: 'REGISTER NOW',
     passtest: [
-        'The password must be 8-10 characters long.',
-        'Must not contain special characters.',
-        'Must contain at least 1 small letter.',
-        'Must contain at least 1 capital letter.',
+        'Only alphanumeric characters are allowed.',
+        'The password must be 6-9 characters long.',
+        'Must contain at least 1 letter.',
         'Must contain at least 1 number.'
     ],
-    bottominfo: 'Your data is always protected with us. You can change your mind anytime by...',
-    more: 'more',
-    morebox: 'You can change your mind at any time by clicking on the unsubscribe link in the footer of any email you receive from us. We will treat your information with respect. By clicking above, you agree that we may process your information in accordance with these terms.',
+    morebox: 'Example: 12John34',
+    bcbid: [
+        'bid',
+        '326.56'
+    ],
+    bcask: [
+        'ask',
+        '329.52'
+    ],
+    join_title: [
+        'Join Us and Start Getting Rich with',
+        'Bitcoin Evolution!'
+    ],
+    join_description: [
+        'The Bitcoin Evolution is a group reserved exclusively to people who jumped on the insane returns that Bitcoin offers and have quietly amassed a fortune in doing so.',
+        'Bitcoin Evolution Members enjoy retreats around the world every month while they make money on their laptop with just a few minutes of “work” every day.'
+    ],
+    descriptions: [
+        {
+            img: laser,
+            name: 'Laser-Accurate Performance',
+            text: 'There is no other trading app in the world that performs at the 99.4% level of accuracy that The Bitcoin Evolution is able to hit. That’s why our members from around the world trust us to double, triple, and quadruple their hard-earned money.'
+        },
+        {
+            img: superior,
+            name: 'Superior Technology',
+            text: 'The Bitcoin Evolution software has been created using the most advanced programming the trading world has ever seen. The software is ahead of the markets by 0.01 seconds. And if you know anything about trading, you know this is a huge deal. This “time leap” makes the software the most consistent trading app on the planet.'
+        },
+        {
+            img: trandingApp,
+            name: 'Award-Winning Trading App',
+            text: 'The Bitcoin Evolution app has won a number of awards. The most recent award we have had the honor of receiving is getting #1 in the trading software category for the US Trading Association.'
+        },
+    ],
     qna_title: 'FAQ',
     qna_subtitle: 'Here are the most common questions with our answers.',
     qna: [

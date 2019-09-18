@@ -4,6 +4,16 @@ import logo from './logo.png'
 import headerPhoto from './header-photos/1.jpg'
 
 export default class Header extends Component {
+    constructor(props) {
+        super(props);
+
+        let today = new Date(),
+            date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+
+        this.state = {
+            date: date
+        };
+    }
 
     render() {
         let version = this.props.version;
@@ -11,7 +21,7 @@ export default class Header extends Component {
         return (
             <header className='Header'>
                 <div className="intro">
-                    <p><b>WARNING:</b> Due to extremely high media demand, we will close registration as of <b>17/9/2019 - HURRY!</b> 00:00</p>
+                    <p><b>WARNING:</b> Due to extremely high media demand, we will close registration as of <b>{this.state.date} - HURRY!</b> 00:00</p>
                 </div>
                 <div className="container">
                     <div className="row">
