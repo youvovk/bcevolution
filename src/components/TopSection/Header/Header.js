@@ -20,11 +20,14 @@ export default class Header extends Component {
     }
 
     secondsToTime(sec){
+
         let divisor_for_minutes = sec % (60 * 60);
         let minutes = Math.floor(divisor_for_minutes / 60);
+        minutes = ("0" + minutes).slice(-2);
 
         let divisor_for_seconds = divisor_for_minutes % 60;
-        let seconds = Math.ceil(divisor_for_seconds);
+        let seconds = Math.round(divisor_for_seconds);
+        seconds = ("0" + seconds).slice(-2);
 
         let obj = {
             "m": minutes,
