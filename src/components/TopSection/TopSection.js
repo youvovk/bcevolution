@@ -56,7 +56,7 @@ export default class TopSection extends Component {
                         <h4>{version.subtitle2[0]} <span>{version.subtitle2[1]}</span>{version.subtitle2[2]} <span>{version.subtitle2[3]}</span> {version.subtitle2[4]}</h4>
                     </div>
                 </div>
-                <div className="top-reg">
+                <div className="top-reg" id="top">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-8 col-sm-7">

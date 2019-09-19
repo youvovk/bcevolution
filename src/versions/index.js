@@ -5,6 +5,9 @@ import steven from './img/testimoniald.png'
 import laser from './img/join1.png'
 import superior from './img/join2.png'
 import trandingApp from './img/join3.png'
+import step1 from './img/step1.png'
+import step2 from './img/step2.png'
+import step3 from './img/step3.png'
 
 
 export const dk = {
@@ -201,7 +204,7 @@ export const en = {
     how_it_works_title: 'How It Works',
     how_it_works_information: [
         {
-            img: ernest,
+            img: step1,
             title: [
                 'Fill Out The Registration',
                 'Form on This Page'
@@ -209,74 +212,48 @@ export const en = {
             description: 'Once your registration is accepted, you will automatically become the newest member of The Bitcoin Evolution. This means you will get to claim our proprietary bitcoin trading software for free.'
         },
         {
-            img: ernest,
+            img: step2,
             title: [
-                'Fill Out The Registration',
-                'Form on This Page'
+                'Fund Your Account'
             ],
-            description: 'Once your registration is accepted, you will automatically become the newest member of The Bitcoin Evolution. This means you will get to claim our proprietary bitcoin trading software for free.'
+            description: 'Like any business, you need working capital to get started. So to start profiting with The Bitcoin Evolution, you must invest any amount you desire of $250 or more.'
         },
         {
-            img: ernest,
+            img: step3,
             title: [
-                'Fill Out The Registration',
-                'Form on This Page'
+                'Start Profiting'
             ],
-            description: 'Once your registration is accepted, you will automatically become the newest member of The Bitcoin Evolution. This means you will get to claim our proprietary bitcoin trading software for free.'
+            description: 'Click trade to enjoy precise and accurate hands-free trading powered by our award-winning algorithm. You can also set the trading to manual if you prefer to trade on your own.'
         }
     ],
-    qna_title: 'FAQ',
-    qna_subtitle: 'Here are the most common questions with our answers.',
-    qna: [
+    qna_title: 'Frequently Asked Questions',
+    qna_question: [
         {
-            q: 'Is Bitcoin safe?',
-            a: 'If you look at bitcoin’s history it has lots of ups and downs. However, look more closely and you’ll notice that after every time it goes down it increases to a new high. This is because Bitcoin is constantly growing.'
+            q: 'What kind of results can I expect?',
+            a: 'Bitcoin Evolution members typically profit a minimum of $1,300 daily.'
         },
         {
-            q: 'What’s in it for us?',
-            a: 'At Bitcoin Profit, we are all investors in Bitcoin. Therefore, we know that the more people that join us, the bigger Bitcoin will grow.'
+            q: 'How many hours per day do I need to work?',
+            a: 'Our members work an average of 20 minutes a day or less. Because the software handles the trading, the amount of "work" required is minimal.'
         },
         {
-            q: 'What’s the secret?',
-            a: 'The secret is that there is no secret. Join today and we’ll show you just how easy it is to get started trading Bitcoin.'
+            q: 'What is the maximum amount that I can make?',
+            a: 'Your profits are unlimited within The Bitcoin Evolution. Some members earned their first million within just 61 days.'
         },
         {
-            q: 'Is it risky?',
-            a: 'The risk levels depend on how you trade. Join us today and we’ll show you how to maximise your profits and minimise your risk.'
+            q: 'How much does the software cost?',
+            a: 'Members of The Bitcoin Evolution get a copy of our proprietary software free of charge. To become a member, simply fill out the form on this page.'
         },
         {
-            q: 'Why Join Bitcoin Profit?',
-            a: 'Bitcoin Profit enables you to easily trade your Bitcoin for real cash. We also have a state of the art platform which makes trading easier than ever before. Don’t believe us? Join today and see for yourself. Getting involved in the Bitcoin revolution has never been easier.'
+            q: 'Is this like MLM or Affiliate Marketing?',
+            a: 'This is not like MLM, affiliate marketing or anything else out there. The software is powered by an innovative algorithm that wins trades with 99.4% accuracy.'
         },
         {
-            q: 'What’s the catch?',
-            a: 'No catch! You simply sign up, deposit an initial trading amount of $250 and we’ll do the rest. Our platform enables the easiest way to get started trading Bitcoin. No hassle, no fuss so that you can start earning instantly.'
-        },
-    ],
-    mem_title: 'Famous names in trading',
-    mem_subtitle: 'There are a lot of big names in trading. Here is what some of the most famous traders have to say.',
-    mems: [
-        {
-
-            name: 'Alexander Elder',
-            text: 'You can be free. You can live and work anywhere in the world. You can be independent from routine and not answer to anybody.'
-        },
-        {
-
-            name: 'Ed Seykota',
-            text: 'Win or lose, everybody gets what they want out of the market. Some people seem to like to lose, so they win by losing money.'
-        },
-        {
-
-            name: 'William O’Neil',
-            text: 'What seems too high and risky to the majority generally goes higher and what seems low and cheap generally goes lower.'
-        },
-        {
-
-            name: 'Warren Buffett',
-            text: 'You don\'t need to be a rocket scientist. Investing is not a game where the guy with the 160 IQ beats the guy with 130 IQ.'
+            q: 'Are there any fees?',
+            a: 'There are no hidden fees. No broker fees or commissions. All of your money is 100% yours and you are free to withdraw it at any time you choose without delay.'
         },
     ],
+    last_btn: 'Get Started Now!',
     risk: [
         'IMPORTANT:',
         'Earnings and Legal Disclaimers',

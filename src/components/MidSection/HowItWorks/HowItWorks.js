@@ -18,12 +18,8 @@ export default class HowItWorks extends Component {
                                         <div className="how-it-works">
                                             <img src={item.img}/>
                                             <p className="steps">step{index+1}</p>
-
-                                            <div className="person-card">
-
-                                                <div className="how-it-works_title">
-                                                    <p>{item.title[0]}<br/>{item.title[1]}</p>
-                                                </div>
+                                            <div className="how-it-works_title">
+                                                <p>{item.title[0]}<br/>{item.title[1]}</p>
                                             </div>
                                             <div className="how-it-works-text">
                                                 <p>{item.description}</p>

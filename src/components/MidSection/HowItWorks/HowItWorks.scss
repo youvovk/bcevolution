@@ -13,4 +13,42 @@
         margin: 0 0 30px 0;
         line-height: 1.1;
     }
+    .how-it-works {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            max-width: 100%;
+            filter: hue-rotate(150deg);
+        }
+        .steps {
+            font-weight: 900;
+            color: #a110cb;
+            font-size: 24px;
+            padding: 0;
+            margin: 20px 0 10px 0;
+            min-height: auto;
+            text-transform: uppercase;
+        }
+        .how-it-works_title {
+            p {
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 20px;
+                padding: 0;
+                margin: 0 0 20px 0;
+                min-height: 50px;
+                line-height: normal;
+                text-align: center;
+            }
+        }
+        .how-it-works-text {
+            p {
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+    }
 }

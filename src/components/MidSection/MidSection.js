@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Specification from './Specification/Specification'
 import Review from './Review/Review'
 import HowItWorks from './HowItWorks/HowItWorks'
+import Faq from './Faq/Faq'
 
 import arrowBit from './images/arrow-bid.png'
 import arrowAsk from './images/arrow-ask.png'
@@ -52,6 +53,7 @@ export default class MidSection extends Component {
                 <Specification version={this.props.version}/>
                 <Review version={this.props.version}/>
                 <HowItWorks version={this.props.version}/>
+                <Faq version={this.props.version}/>
                 {/*<div className="innersection">
                     <div className="content">
                         <div className="title">{version.qna_title}</div>

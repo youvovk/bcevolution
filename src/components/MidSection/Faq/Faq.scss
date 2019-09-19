@@ -1,0 +1,81 @@
+.Faq {
+    background: #ffffff;
+    .spacer {
+        height: 10px;
+        background: #e7e7e7;
+        border-top: 1px #e1e1e1 solid;
+        border-bottom: 1px #e1e1e1 solid;
+        margin-bottom: 40px;
+    }
+    h2 {
+        padding: 0;
+        margin: 0 0 40px 0;
+        color: #292a2b;
+        font-weight: 900;
+        text-shadow: 1px 1.732px 4px rgba(0, 0, 0, 0.1);
+        font-size: 36px;
+        text-align: center;
+    }
+    .question {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-bottom: 1px solid #eee;
+        img {
+            filter: hue-rotate(266deg);
+            margin-right: 25px;
+        }
+        .question-title {
+            padding: 0;
+            margin: 5px 0;
+            font-weight: 900;
+            color: #426578;
+            font-size: 30px;
+            line-height: 1.1;
+        }
+        .question-answer {
+            color: #31404c;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 1.4;
+        }
+    }
+    .question-block {
+        .question {
+            padding: 20px 0;
+            &:first-child {
+                padding-top: 0;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .last-btn {
+        background: #f7f8fa;
+        padding: 30px 0;
+        border-top: 1px #e1e1e1 solid;
+        text-align: center;
+        margin-top: 40px;
+        a {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            color: white;
+            text-shadow: 0.5px 0.866px 0px rgba(1, 198, 0, 0.35);
+            border-radius: 10px;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #a110cb 0%, #740d92 100%);
+            cursor: pointer;
+            text-decoration: none;
+            border: 1px solid transparent;
+            &:hover {
+                background: linear-gradient(to bottom, #740d92 0%, #a110cb 100%);
+            }
+        }
+    }
+}
