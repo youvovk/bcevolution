@@ -10,9 +10,9 @@ export default class Specification extends Component {
                 <div className="container">
                     <div className="row">
                         {
-                            version.descriptions.slice(0,3).map(item => {
+                            version.descriptions.slice(0,3).map((item, index) => {
                                 return (
-                                    <div className="col-md-4">
+                                    <div className="col-lg-4" key={index}>
                                         <div className="white-block">
                                             <img src={item.img} alt={item.name}/>
                                             <div className="white-block_description">

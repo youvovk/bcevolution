@@ -49,6 +49,9 @@
                 text-shadow: 1px 1.732px 4px rgba(0, 0, 0, 0.1);
                 font-size: 36px;
                 line-height: 1.1;
+                @media (max-width: 991px) {
+                    font-size: 24px;
+                }
             }
         }
     }
@@ -58,6 +61,12 @@
                 border-left: 1px solid #e0e0e0;
                 &:last-child {
                     border-right: 1px solid #e0e0e0;
+                }
+                @media (max-width: 991px) {
+                    border: none;
+                    &:last-child {
+                        border: none;
+                    }
                 }
             }
 
@@ -76,6 +85,9 @@
             img {
                 height: 96px;
                 padding-right: 10px;
+            }
+            @media (max-width: 991px) {
+                justify-content: center;
             }
         }
         .person-name {

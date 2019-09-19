@@ -255,15 +255,13 @@ export const en = {
     ],
     last_btn: 'Get Started Now!',
     risk: [
-        'IMPORTANT:',
-        'Earnings and Legal Disclaimers',
-        'Earnings and income representations made by , (collectively “This Website” only used as aspirational examples of your earnings potential. The success of those in the testimonials and other examples are exceptional results and therefore are not intended as a guarantee that you or others will achieve the same results. Individual results will vary and are entirely dependent on your use of .',
-        'This Website is not responsible for your actions. You bear sole responsibility for your actions and decisions when using products and services and therefore you should always exercise caution and due diligence. You agree that this Website is not liable to you in any way for the results of using our products and services. See our Terms & Conditions for our full disclaimer of liability and other restrictions.',
-        'This Website may receive compensation for products and services they recommend to you. If you do not want This Website to be compensated for a recommendation, then we advise that you search online for a similar product through a non-affiliate link.'
+        'WARNING:',
+        'Due to extremely high media demand, we will close registration as of',
+        ' - HURRY!',
     ],
-    modal_title: 'Wait!',
-    modal_sub: 'Before you leave...',
-    modal_text1: 'The markets are moving fast. Don’t miss out on your chance to profit from the latest rises and falls.',
-    modal_text2: 'Register today and join the thousands of people changing their lives thanks to online trading.'
+    exclusive: [
+        'Exclusive for',
+        'Residents'
+    ]
 
 }

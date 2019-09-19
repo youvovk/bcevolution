@@ -14,8 +14,18 @@
         }
     }
     .logo {
+        @media (max-width: 764px) {
+            text-align: center;
+            padding: 10px 15px;
+        }
         img {
             padding-top: 5px;
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+            @media (max-width: 764px) {
+                max-width: 150px;
+            }
         }
     }
     .exclusive {
@@ -153,6 +163,12 @@
                     text-decoration: none; 
                 }
             }
+        }
+    }
+    .hidden-md {
+        display: block;
+        @media (max-width: 764px) {
+            display: none;
         }
     }
 }

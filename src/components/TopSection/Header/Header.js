@@ -11,8 +11,46 @@ export default class Header extends Component {
             date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
 
         this.state = {
-            date: date
+            date: date,
+            time: {},
+            seconds: 330
         };
+        this.timer = 0;
+        this.countDown = this.countDown.bind(this);
+    }
+
+    secondsToTime(sec){
+        let divisor_for_minutes = sec % (60 * 60);
+        let minutes = Math.floor(divisor_for_minutes / 60);
+
+        let divisor_for_seconds = divisor_for_minutes % 60;
+        let seconds = Math.ceil(divisor_for_seconds);
+
+        let obj = {
+            "m": minutes,
+            "s": seconds
+        };
+        return obj;
+    }
+
+    componentDidMount() {
+        let timeLeftVar = this.secondsToTime(this.state.seconds);
+        this.setState({ time: timeLeftVar });
+        if (this.timer == 0 && this.state.seconds > 0) {
+            this.timer = setInterval(this.countDown, 1000);
+        }
+    }
+
+    countDown() {
+        let seconds = this.state.seconds - 1;
+        this.setState({
+            time: this.secondsToTime(seconds),
+            seconds: seconds,
+        });
+
+        if (seconds == 0) {
+            clearInterval(this.timer);
+        }
     }
 
     render() {
@@ -21,17 +59,18 @@ export default class Header extends Component {
         return (
             <header className='Header'>
                 <div className="intro">
-                    <p><b>WARNING:</b> Due to extremely high media demand, we will close registration as of <b>{this.state.date} - HURRY!</b> 00:00</p>
+                    <p><b>{version.risk[0]}</b> {version.risk[1]} <b>{this.state.date} {version.risk[2]}</b> {this.state.time.m}:{this.state.time.s}</p>
                 </div>
+                {/*<button onClick={this.startTimer}>Start</button>*/}
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 col-sm-4 logo">
+                        <div className="col-lg-6 col-md-4 col-sm-12 logo">
                             <img src={logo} alt="logo"/>
                         </div>
-                        <div className="col-md-6 col-sm-8 hidden-xs">
+                        <div className="col-lg-6 col-md-8 col-sm-12 hidden-md">
                             <div className="row">
                                 <div className="col-sm-6 exclusive">
-                                    <p>Exclusive for<br/><strong><span>Ukraine</span><br/>Residents</strong></p>
+                                    <p>{version.exclusive[0]}<br/><strong><span>Ukraine</span><br/>{version.exclusive[1]}</strong></p>
                                 </div>
                                 <div className="col-sm-6 notification-top">
                                     <img src={headerPhoto} alt="" className="circle-photo"/>

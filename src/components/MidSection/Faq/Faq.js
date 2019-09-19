@@ -21,9 +21,9 @@ export default class Faq extends Component {
                             </div>
                             <div className="col-sm-12 question-block">
                                 {
-                                    version.qna_question.slice(0,6).map((item) => {
+                                    version.qna_question.slice(0,6).map((item, index) => {
                                         return (
-                                            <div className="question">
+                                            <div className="question" key={index}>
                                                 <img src={qImage}/>
                                                 <div className="question-text">
                                                     <p className="question-title">{item.q}</p>
@@ -37,16 +37,7 @@ export default class Faq extends Component {
                         </div>
                     </div>
                     <div className="last-btn">
-                        <a href="#" className="active">
-                            {/*<Link
-                                activeClass="active"
-                                to="top"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
-                            />*/}
-                            {version.last_btn}
-                        </a>
+                        <a href="#" className="active">{version.last_btn}</a>
                     </div>
                 </div>
             </div>

@@ -15,6 +15,9 @@
         text-shadow: 1px 1.732px 4px rgba(0, 0, 0, 0.1);
         font-size: 36px;
         text-align: center;
+        @media (max-width: 764px) {
+            font-size: 24px;
+        }
     }
     .question {
         display: flex;
@@ -32,12 +35,18 @@
             color: #426578;
             font-size: 30px;
             line-height: 1.1;
+            @media (max-width: 764px) {
+                font-size: 20px;
+            }
         }
         .question-answer {
             color: #31404c;
             font-weight: 300;
             font-size: 22px;
             line-height: 1.4;
+            @media (max-width: 764px) {
+                font-size: 16px;
+            }
         }
     }
     .question-block {

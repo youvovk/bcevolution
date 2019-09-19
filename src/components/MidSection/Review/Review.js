@@ -29,9 +29,9 @@ export default class Review extends Component {
                     <div className="container">
                         <div className="row border-block">
                             {
-                                version.review_body.slice(0,4).map(item => {
+                                version.review_body.slice(0,4).map((item, index) => {
                                     return (
-                                        <div className="col-md-3 border-line">
+                                        <div className="col-lg-3 border-line" key={index}>
                                             <div className="person-block">
                                                 <div className="person-card">
                                                     <img src={item.img} alt={item.name}/>

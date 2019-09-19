@@ -14,7 +14,7 @@ export default class HowItWorks extends Component {
                         {
                             version.how_it_works_information.slice(0,3).map((item, index) => {
                                 return (
-                                    <div className="col-md-4">
+                                    <div className="col-lg-4" key={index}>
                                         <div className="how-it-works">
                                             <img src={item.img}/>
                                             <p className="steps">step{index+1}</p>
