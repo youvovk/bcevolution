@@ -64,7 +64,6 @@ export default class Header extends Component {
                 <div className="intro">
                     <p><b>{version.risk[0]}</b> {version.risk[1]} <b>{this.state.date} {version.risk[2]}</b> {this.state.time.m}:{this.state.time.s}</p>
                 </div>
-                {/*<button onClick={this.startTimer}>Start</button>*/}
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-md-4 col-sm-12 logo">
