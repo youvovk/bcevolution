@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import People  from './People/People'
 
 import logo from './logo.png'
 import headerPhoto from './header-photos/1.jpg'
@@ -75,11 +76,7 @@ export default class Header extends Component {
                                     <p>{version.exclusive[0]}<br/><strong><span>Ukraine</span><br/>{version.exclusive[1]}</strong></p>
                                 </div>
                                 <div className="col-sm-6 notification-top">
-                                    <img src={headerPhoto} alt="" className="circle-photo"/>
-                                    <div className="notification-text">
-                                        <p className="person-name"><span>Ben K.</span> just made</p>
-                                        <p className="person-bet"><span>$</span><span>150</span></p>
-                                    </div>
+                                    <People version={this.props.version}/>
                                 </div>
                             </div>
                         </div>

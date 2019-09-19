@@ -8,6 +8,10 @@ import trandingApp from './img/join3.png'
 import step1 from './img/step1.png'
 import step2 from './img/step2.png'
 import step3 from './img/step3.png'
+import chris from './img/chris.jpg'
+import kiyle from './img/kiyle.jpg'
+import amelie from './img/amelie.jpg'
+import isabel from './img/isabel.jpg'
 
 
 export const dk = {
@@ -115,7 +119,28 @@ export const dk = {
 
 export const en = {
 
-    disc: "- Advertorial -",
+    customer: [
+        {
+            img: chris,
+            name: 'Christopher G.',
+            earn: '102',
+        },
+        {
+            img: isabel,
+            name: 'Isabel W.',
+            earn: '60',
+        },
+        {
+            img: amelie,
+            name: 'Amelie J.',
+            earn: '194',
+        },
+        {
+            img: kiyle,
+            name: 'Kyle S.',
+            earn: '179',
+        },
+    ],
     title: "Crypto Is Making People Rich",
     subtitle: "And You Can Become The Next Millionaire…",
     subtitle2: [
