@@ -29,11 +29,11 @@ export default class Header extends Component {
         let seconds = Math.round(divisor_for_seconds);
         seconds = ("0" + seconds).slice(-2);
 
-        let obj = {
-            "m": minutes,
-            "s": seconds
+        let timeObj = {
+            "minutes": minutes,
+            "seconds": seconds
         };
-        return obj;
+        return timeObj;
     }
 
     componentDidMount() {
@@ -62,7 +62,7 @@ export default class Header extends Component {
         return (
             <header className='Header'>
                 <div className="intro">
-                    <p><b>{version.risk[0]}</b> {version.risk[1]} <b>{this.state.date} {version.risk[2]}</b> {this.state.time.m}:{this.state.time.s}</p>
+                    <p><b>{version.risk[0]}</b> {version.risk[1]} <b>{this.state.date} {version.risk[2]}</b> {this.state.time.minutes}:{this.state.time.seconds}</p>
                 </div>
                 <div className="container">
                     <div className="row">

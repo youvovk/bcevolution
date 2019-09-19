@@ -16,7 +16,7 @@ export default class HowItWorks extends Component {
                                 return (
                                     <div className="col-lg-4" key={index}>
                                         <div className="how-it-works">
-                                            <img src={item.img}/>
+                                            <img src={item.img} alt="steps"/>
                                             <p className="steps">step{index+1}</p>
                                             <div className="how-it-works_title">
                                                 <p>{item.title[0]}<br/>{item.title[1]}</p>

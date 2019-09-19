@@ -1,11 +1,7 @@
 import React, {Component} from 'react'
-import { Link, animateScroll as scroll } from "react-scroll";
 import qImage from './q.png'
 
 export default class Faq extends Component {
-    scrollToTop = () => {
-        scroll.scrollToTop();
-    };
 
     render() {
         let version = this.props.version;
@@ -24,7 +20,7 @@ export default class Faq extends Component {
                                     version.qna_question.slice(0,6).map((item, index) => {
                                         return (
                                             <div className="question" key={index}>
-                                                <img src={qImage}/>
+                                                <img src={qImage} alt="question"/>
                                                 <div className="question-text">
                                                     <p className="question-title">{item.q}</p>
                                                     <p className="question-answer">{item.a}</p>
