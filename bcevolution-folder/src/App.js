@@ -14,7 +14,7 @@ import * as Version from './versions'
 // Pages
 import * as Pages from './pages'
 
-export default class App extends Component {
+export default class App extends ReactQueryParams {
     constructor(props) {
         super(props);
 
@@ -294,14 +294,14 @@ export default class App extends Component {
                 return (
                     <div className='App'>
                         <TopSection form={this.state.leadData} handlePassSync={this.handlePassSync}
-                                    languageManager={this.props.languageManager} countryCode={this.state.countryCode}
+                                    version={this.state.version} countryCode={this.state.countryCode}
                                     handleStep={this.handleStep} step={this.state.step} handleSubmit={this.handleSubmit}
                                     pageHandler={this.pageHandler}
                                     handleForward={this.handleForward}/>
-                        <MidSection  languageManager={this.props.languageManager}/>
+                        <MidSection version={this.state.version}/>
                         <BottomSection 
                                     form={this.state.leadData} handlePassSync={this.handlePassSync}
-                                    languageManager={this.props.languageManager} countryCode={this.state.countryCode}
+                                    version={this.state.version} countryCode={this.state.countryCode}
                                     handleStep={this.handleStep} step={this.state.step} handleSubmit={this.handleSubmit}
                                     pageHandler={this.pageHandler}
                                     handleForward={this.handleForward}/>
