@@ -13,7 +13,7 @@ import mcAffee from './images/mcafee.png'
 
 export default class MidSection extends Component {
     render() {
-    let version = this.props.version;
+        let languageManager = this.props.languageManager();
 
         return (
             <div className="MidSection">
@@ -22,11 +22,11 @@ export default class MidSection extends Component {
                         <div className="row">
                             <div className="col-lg-5 bitcoin-block">
                                 <div className="bitcoin bid">
-                                    <p>{version.bcbid[0]} <span>${version.bcbid[1]}</span></p>
+                                    <p>{languageManager.bcbid[0]} <span>${languageManager.bcbid[1]}</span></p>
                                     <img src={arrowBit} alt="arrow" className="bid-arrow"/>
                                 </div>
                                 <div className="bitcoin ask">
-                                    <p>{version.bcask[0]} <span>${version.bcask[1]}</span></p>
+                                    <p>{languageManager.bcask[0]} <span>${languageManager.bcask[1]}</span></p>
                                     <img src={arrowAsk} alt="arrow" className="bid-arrow"/>
                                 </div>
                             </div>
@@ -43,17 +43,17 @@ export default class MidSection extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12">
-                                <h2>{version.join_title[0]} <span>{version.join_title[1]}</span></h2>
-                                <p>{version.join_description[0]}</p>
-                                <p>{version.join_description[1]}</p>
+                                <h2>{languageManager.join_title[0]} <span>{languageManager.join_title[1]}</span></h2>
+                                <p>{languageManager.join_description[0]}</p>
+                                <p>{languageManager.join_description[1]}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <Specification version={this.props.version}/>
-                <Review version={this.props.version}/>
-                <HowItWorks version={this.props.version}/>
-                <Faq version={this.props.version}/>
+                <Specification languageManager={this.props.languageManager}/>
+                <Review languageManager={this.props.languageManager}/>
+                <HowItWorks languageManager={this.props.languageManager}/>
+                <Faq languageManager={this.props.languageManager}/>
             </div>
 
         )

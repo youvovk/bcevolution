@@ -3,7 +3,7 @@ import logo from './footer-logo.png'
 
 export default class BottomSection extends Component {
     render() {
-        let version = this.props.version;
+        let languageManager = this.props.languageManager();
 
         return (
             <div className='BottomSection'>

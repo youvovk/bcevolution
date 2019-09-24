@@ -42,18 +42,18 @@ export default class TopSection extends Component {
     }*/
 
     render() {
-        let version = this.props.version;
+        let languageManager = this.props.languageManager();
 
         return (
             <div className='TopSection'>
-                <Header version={this.props.version} handleScroll={this.handleScroll.bind(this)}/>
+                <Header languageManager={this.props.languageManager} handleScroll={this.handleScroll.bind(this)}/>
                 <div className="headline">
                     <div className="title">
-                        <h1>{version.title}</h1>
+                        <h1>{languageManager.title}</h1>
                     </div>
                     <div className="subtitle">
-                        <h2>{version.subtitle}</h2>
-                        <h4>{version.subtitle2[0]} <span>{version.subtitle2[1]}</span>{version.subtitle2[2]} <span>{version.subtitle2[3]}</span> {version.subtitle2[4]}</h4>
+                        <h2>{languageManager.subtitle}</h2>
+                        <h4>{languageManager.subtitle2[0]} <span>{languageManager.subtitle2[1]}</span>{languageManager.subtitle2[2]} <span>{languageManager.subtitle2[3]}</span> {languageManager.subtitle2[4]}</h4>
                     </div>
                 </div>
                 <div className="top-reg" id="top">
@@ -64,8 +64,8 @@ export default class TopSection extends Component {
                             </div>
                             <div className="col-lg-4 col-md-5 col-sm-12">
                                 <div className="regform" ref={this.regPanel}>
-                                    <div className="reg-title"><span>{version.topreg1}</span><br/>{version.topreg2}</div>
-                                    <Regform handlePassSync={this.props.handlePassSync} form={this.props.form} pageHandler={this.props.pageHandler} countryCode={this.props.countryCode} version={this.props.version} handleStep={this.props.handleStep} handleForward={this.props.handleForward} handleSubmit={this.props.handleSubmit} step={this.props.step}/>
+                                    <div className="reg-title"><span>{languageManager.topreg1}</span><br/>{languageManager.topreg2}</div>
+                                    <Regform handlePassSync={this.props.handlePassSync} form={this.props.form} pageHandler={this.props.pageHandler} countryCode={this.props.countryCode} languageManager={this.props.languageManager} handleStep={this.props.handleStep} handleForward={this.props.handleForward} handleSubmit={this.props.handleSubmit} step={this.props.step}/>
                                 </div>
                             </div>
                         </div>

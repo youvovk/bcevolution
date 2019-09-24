@@ -58,12 +58,12 @@ export default class Header extends Component {
     }
 
     render() {
-        let version = this.props.version;
+        let languageManager = this.props.languageManager();
 
         return (
             <header className='Header'>
                 <div className="intro">
-                    <p><b>{version.risk[0]}</b> {version.risk[1]} <b>{this.state.date} {version.risk[2]}</b> {this.state.time.minutes}:{this.state.time.seconds}</p>
+                    <p><b>{languageManager.risk[0]}</b> {languageManager.risk[1]} <b>{this.state.date} {languageManager.risk[2]}</b> {this.state.time.minutes}:{this.state.time.seconds}</p>
                 </div>
                 <div className="container">
                     <div className="row">
@@ -73,10 +73,10 @@ export default class Header extends Component {
                         <div className="col-lg-6 col-md-8 col-sm-12 hidden-md">
                             <div className="row">
                                 <div className="col-sm-6 exclusive">
-                                    <p>{version.exclusive[0]}<br/><strong><span>Ukraine</span><br/>{version.exclusive[1]}</strong></p>
+                                    <p>{languageManager.exclusive[0]}<br/><strong><span>Ukraine</span><br/>{languageManager.exclusive[1]}</strong></p>
                                 </div>
                                 <div className="col-sm-6 notification-top">
-                                    <People version={this.props.version}/>
+                                    <People languageManager={this.props.languageManager}/>
                                 </div>
                             </div>
                         </div>

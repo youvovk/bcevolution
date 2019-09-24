@@ -14,14 +14,14 @@ export default class Regform extends Component {
     constructor(props) {
         super(props)
 
-        this.state = {
+        /*this.state = {
             fname: this.props.form.first_name,
             lname: this.props.form.last_name,
             email: this.props.form.email,
             check: false,
             pass: this.props.form.password,
             tel: this.props.form.phone_number,
-        }
+        }*/
 
         this.setTextInputRef = element => {
             this.currentForm = element;
@@ -190,7 +190,7 @@ export default class Regform extends Component {
 
     render() {
 
-        let version = this.props.version;
+        let languageManager = this.props.languageManager();
 
         if (this.props.step <= 3) {
             return (
@@ -210,19 +210,19 @@ export default class Regform extends Component {
                     </div>
                     <div className='inner'>
                         <div className='form-wrapper one'>
-                            <input className="inputfield fname" type="text" name="fname" placeholder={version.fname} onChange={this.handleFirstStepChange}/>
-                            <input className="inputfield lname" type="text" name="lname" placeholder={version.lname} onChange={this.handleFirstStepChange}/>
-                            <input className="inputfield email" type="text" name="email" placeholder={version.email} autoComplete='off' onChange={this.handleFirstStepChange}/>
-                            <button onClick={this.handleForward.bind(this)} className='start'>{version.button}</button>
+                            <input className="inputfield fname" type="text" name="fname" placeholder={languageManager.fname} onChange={this.handleFirstStepChange}/>
+                            <input className="inputfield lname" type="text" name="lname" placeholder={languageManager.lname} onChange={this.handleFirstStepChange}/>
+                            <input className="inputfield email" type="text" name="email" placeholder={languageManager.email} autoComplete='off' onChange={this.handleFirstStepChange}/>
+                            <button onClick={this.handleForward.bind(this)} className='start'>{languageManager.button}</button>
                         </div>
                         <div className='form-wrapper two'>
-                            <input className="inputfield pass" type="password" maxLength="10" onChange={validateInput.checkInput} name="password" placeholder={version.pass}/>
+                            <input className="inputfield pass" type="password" maxLength="10" onChange={validateInput.checkInput} name="password" placeholder={languageManager.pass}/>
                             <ul className='req'>
-                                {version.passtest.map(li => {
+                                {languageManager.passtest.map(li => {
                                     return (<li key={li}>{li}</li>)
                                 })}
                             </ul>
-                            <button onClick={this.handleForward.bind(this)} className='start'>{version.button}</button>
+                            <button onClick={this.handleForward.bind(this)} className='start'>{languageManager.button}</button>
                         </div>
                         <div className='form-wrapper three'>
                             <IntlTelInput
@@ -232,7 +232,7 @@ export default class Regform extends Component {
                                 autoPlaceholder={true}
                                 separateDialCode={true}
                                 />
-                            <button onClick={this.handleForward.bind(this)} className='start' >{version.button_last}</button>
+                            <button onClick={this.handleForward.bind(this)} className='start' >{languageManager.button_last}</button>
                         </div>
                     </div>
                     <div className="error"><Mark className='excl'/><span></span></div>

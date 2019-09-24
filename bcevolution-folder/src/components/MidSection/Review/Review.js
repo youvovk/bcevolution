@@ -1,9 +1,25 @@
 import React, {Component} from 'react'
+import testimoniala from './images/testimoniala.png'
+import testimonialb from './images/testimonialb.png'
+import testimonialc from './images/testimonialc.png'
+import testimoniald from './images/testimoniald.png'
 
 
 export default class Review extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            images: {
+                testimoniala,
+                testimonialb,
+                testimonialc,
+                testimoniald
+            }
+        }
+    }
     render() {
-        let version = this.props.version;
+        let languageManager = this.props.languageManager();
 
         return (
             <div className="Review">
@@ -12,7 +28,7 @@ export default class Review extends Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-sm-10 offset-sm-2">
-                                    <p>{version.review_title}</p>
+                                    <p>{languageManager.review_title}</p>
                                 </div>
                             </div>
                         </div>
@@ -29,12 +45,12 @@ export default class Review extends Component {
                     <div className="container">
                         <div className="row border-block">
                             {
-                                version.review_body.slice(0,4).map((item, index) => {
+                                languageManager.review_body.slice(0,4).map((item, index) => {
                                     return (
                                         <div className="col-lg-3 border-line" key={index}>
                                             <div className="person-block">
                                                 <div className="person-card">
-                                                    <img src={item.img} alt={item.name}/>
+                                                    <img src={this.state.images[item.img]} alt={item.name}/>
                                                     <div className="person-name">
                                                         <p>{item.name}</p>
                                                         <p>{item.place}</p>

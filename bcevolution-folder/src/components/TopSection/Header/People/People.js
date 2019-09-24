@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import amelie from './images/amelie.jpg'
+import chris from './images/chris.jpg'
+import isabel from './images/isabel.jpg'
+import kiyle from './images/kiyle.jpg'
 
 
 export default class People extends Component {
@@ -6,10 +10,15 @@ export default class People extends Component {
         super(props);
         var random = this.rand();
         this.state = {
-            random: random
+            random: random,
+            images: {
+                chris,
+                isabel,
+                amelie,
+                kiyle
+            }
         };
 
-        let version = this.props.version;
     }
 
     rand() {
@@ -30,14 +39,14 @@ export default class People extends Component {
     }
 
     render() {
-        let version = this.props.version;
+        let languageManager = this.props.languageManager();
 
         return (
             <div className="People">
-                <img src={version.customer[this.state.random].img} alt="" className="circle-photo"/>
+                <img src={this.state.images[languageManager.customer[this.state.random].img]} alt="" className="circle-photo"/>
                 <div className="notification-text">
-                    <p className="person-name"><span>{version.customer[this.state.random].name}</span> just made</p>
-                    <p className="person-bet"><span>$</span><span>{version.customer[this.state.random].earn}</span></p>
+                    <p className="person-name"><span>{languageManager.customer[this.state.random].name}</span> just made</p>
+                    <p className="person-bet"><span>$</span><span>{languageManager.customer[this.state.random].earn}</span></p>
                 </div>
             </div>
         )

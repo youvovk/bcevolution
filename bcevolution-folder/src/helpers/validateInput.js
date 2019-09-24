@@ -1,4 +1,4 @@
-export const checkInput = (e) => {
+/*export const checkInput = (e) => {
 
     var input = e.target.value;
 
@@ -55,7 +55,7 @@ export const checkInput = (e) => {
     })
 
   
-}
+}*/
 
 export const checkLength = (input) => {
 

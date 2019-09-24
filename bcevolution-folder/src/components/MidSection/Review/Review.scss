@@ -13,23 +13,23 @@
                 margin: 0;
                 height: 200px;
                 &:first-child {
-                    background: url("./testimonial1.jpg") no-repeat top center;
+                    background: url("images/testimonial1.jpg") no-repeat top center;
                     background-size: cover;
                 }
                 &:nth-child(2) {
-                    background: url("./testimonial2.jpg") no-repeat top center;
+                    background: url("images/testimonial2.jpg") no-repeat top center;
                     background-size: cover;
                 }
                 &:nth-child(3) {
-                    background: url("./testimonial3.jpg") no-repeat top center;
+                    background: url("images/testimonial3.jpg") no-repeat top center;
                     background-size: cover;
                 }
                 &:nth-child(4) {
-                    background: url("./testimonial4.jpg") no-repeat top center;
+                    background: url("images/testimonial4.jpg") no-repeat top center;
                     background-size: cover;
                 }
                 &:nth-child(5) {
-                    background: url("./testimonial5.jpg") no-repeat top center;
+                    background: url("images/testimonial5.jpg") no-repeat top center;
                     background-size: cover;
                 }
             }

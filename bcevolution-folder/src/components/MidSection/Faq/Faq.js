@@ -4,7 +4,7 @@ import qImage from './q.png'
 export default class Faq extends Component {
 
     render() {
-        let version = this.props.version;
+        let languageManager = this.props.languageManager();
 
         return (
             <div className="Faq">
@@ -13,11 +13,11 @@ export default class Faq extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12">
-                                <h2>{version.qna_title}</h2>
+                                <h2>{languageManager.qna_title}</h2>
                             </div>
                             <div className="col-sm-12 question-block">
                                 {
-                                    version.qna_question.slice(0,6).map((item, index) => {
+                                    languageManager.qna_question.slice(0,6).map((item, index) => {
                                         return (
                                             <div className="question" key={index}>
                                                 <img src={qImage} alt="question"/>
@@ -33,7 +33,7 @@ export default class Faq extends Component {
                         </div>
                     </div>
                     <div className="last-btn">
-                        <a href="#" className="active">{version.last_btn}</a>
+                        <a href="#" className="active">{languageManager.last_btn}</a>
                     </div>
                 </div>
             </div>

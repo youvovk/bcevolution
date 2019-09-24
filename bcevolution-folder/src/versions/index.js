@@ -1,17 +1,13 @@
-import mark from './img/testimoniala.png'
-import jenifer from './img/testimonialb.png'
-import ernest from './img/testimonialc.png'
-import steven from './img/testimoniald.png'
-import laser from './img/join1.png'
-import superior from './img/join2.png'
-import trandingApp from './img/join3.png'
+/*import laser from '../components/MidSection/Specification/img/join1.png'
+import superior from '../components/MidSection/Specification/img/join2.png'
+import trandingApp from '../components/MidSection/Specification/img/join3.png'
 import step1 from './img/step1.png'
 import step2 from './img/step2.png'
 import step3 from './img/step3.png'
 import chris from './img/chris.jpg'
 import kiyle from './img/kiyle.jpg'
 import amelie from './img/amelie.jpg'
-import isabel from './img/isabel.jpg'
+import isabel from './img/isabel.jpg'*/
 
 
 export const dk = {
@@ -121,22 +117,22 @@ export const en = {
 
     customer: [
         {
-            img: chris,
+            img: 'chris',
             name: 'Christopher G.',
             earn: '102',
         },
         {
-            img: isabel,
+            img: 'isabel',
             name: 'Isabel W.',
             earn: '60',
         },
         {
-            img: amelie,
+            img: 'amelie',
             name: 'Amelie J.',
             earn: '194',
         },
         {
-            img: kiyle,
+            img: 'kiyle',
             name: 'Kyle S.',
             earn: '179',
         },
@@ -184,17 +180,17 @@ export const en = {
     ],
     descriptions: [
         {
-            img: laser,
+            img: 'laser',
             name: 'Laser-Accurate Performance',
             text: 'There is no other trading app in the world that performs at the 99.4% level of accuracy that The Bitcoin Evolution is able to hit. That’s why our members from around the world trust us to double, triple, and quadruple their hard-earned money.'
         },
         {
-            img: superior,
+            img: 'superior',
             name: 'Superior Technology',
             text: 'The Bitcoin Evolution software has been created using the most advanced programming the trading world has ever seen. The software is ahead of the markets by 0.01 seconds. And if you know anything about trading, you know this is a huge deal. This “time leap” makes the software the most consistent trading app on the planet.'
         },
         {
-            img: trandingApp,
+            img: 'trandingApp',
             name: 'Award-Winning Trading App',
             text: 'The Bitcoin Evolution app has won a number of awards. The most recent award we have had the honor of receiving is getting #1 in the trading software category for the US Trading Association.'
         },
@@ -202,25 +198,25 @@ export const en = {
     review_title: 'Hear From Our Members Who Rely On Our Software To Fund Their Luxury Lifestyles',
     review_body:[
         {
-            img: mark,
+            img: 'testimoniala',
             name: 'Mark K.',
             place: 'Fort Worth, TX',
             text: '"I\'ve been a member of the Bitcoin Evolution for only 47 days. But my life has already changed! Not only have I made my first $10K, but I\'ve also met some of the most incredible people in the process. Thanks, Bitcoin Evolution!"'
         },
         {
-            img: jenifer,
+            img: 'testimonialb',
             name: 'Jennifer A.',
             place: 'Irvine, CA',
             text: '"I finally know what it’s like to live the dream. I no longer feel like I’m on the outside looking in while everyone else has all the fun. The Bitcoin Evolutionhas allowed me to retire early and live the 1% lifestyle."'
         },
         {
-            img: ernest,
+            img: 'testimonialc',
             name: 'Ernest I.',
             place: 'Orem, UT',
             text: '"Surprisingly, I used to be an investor on Wall Street. And I’ve never seen anything like this in my 10 year tenure at the company. My colleagues all thought I was crazy when I quit the firm to invest with the Bitcoin Evolution software full-time. $38,459 in profits later, all of my colleagues are now BEGGING me to let them in."'
         },
         {
-            img: steven,
+            img: 'testimoniald',
             name: 'Steven H.',
             place: 'Niagara Falls, NY',
             text: '"Two weeks ago, I got laid off. With no options left, I thought my life was over. Now I’m making over $1,261.42 each and every day. And for the first time in 2 months, my account isn’t overdrawn. Thanks, Bitcoin Evolution!"'
@@ -229,7 +225,7 @@ export const en = {
     how_it_works_title: 'How It Works',
     how_it_works_information: [
         {
-            img: step1,
+            img: 'step1',
             title: [
                 'Fill Out The Registration',
                 'Form on This Page'
@@ -237,14 +233,14 @@ export const en = {
             description: 'Once your registration is accepted, you will automatically become the newest member of The Bitcoin Evolution. This means you will get to claim our proprietary bitcoin trading software for free.'
         },
         {
-            img: step2,
+            img: 'step2',
             title: [
                 'Fund Your Account'
             ],
             description: 'Like any business, you need working capital to get started. So to start profiting with The Bitcoin Evolution, you must invest any amount you desire of $250 or more.'
         },
         {
-            img: step3,
+            img: 'step3',
             title: [
                 'Start Profiting'
             ],

@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 import ReactQueryParams from 'react-query-params'
 
-import * as LeadHandler from './helpers/leadHandler'
+// import * as LeadHandler from './helpers/leadHandler'
 
 import TopSection from './components/TopSection/TopSection'
 import MidSection from './components/MidSection/MidSection'
 import BottomSection from './components/BottomSection/BottomSection'
 import Page from './pages/Page'
-
-// Versions
-import * as Version from './versions'
 
 // Pages
 import * as Pages from './pages'
@@ -18,17 +15,17 @@ export default class App extends ReactQueryParams {
     constructor(props) {
         super(props);
 
-        if (window.location.host.indexOf("localhost") > -1) {
+       /* if (window.location.host.indexOf("localhost") > -1) {
             this.setQueryParams({
                 validation: 3
             });
-        }
+        }*/
 
         this.state = {
             step: 1,
-            version: null,
+            /*version: null,*/
             page: 'main',
-            leadData: {
+            /*leadData: {
                 account_id: this.queryParams.acc ? parseInt(this.queryParams.acc) : 89,
                 click_id: window.sbidTracking ? window.sbidTracking.getSession() : "",
                 phone_country_prefix: "",
@@ -49,14 +46,26 @@ export default class App extends ReactQueryParams {
                 language: navigator.language.split('-')[0],
                 funnel_name: "bitcoinevolution",
                 validation: this.queryParams.validation ? parseInt(this.queryParams.validation.toString()) : 1
-            }
+            }*/
         };
 
         this.handleStep = this.handleStep.bind(this);
         this.pageHandler = this.pageHandler.bind(this);
         this.handleForward = this.handleForward.bind(this);
-        this.handlePassSync = this.handlePassSync.bind(this);
+       /* this.handlePassSync = this.handlePassSync.bind(this);*/
     }
+
+    handleStep = (step) => {
+        this.setState({step})
+    };
+
+    handleForward = (params) => {
+        this.props.handleLeadStep(params);
+    };
+
+    handleSubmit = (params) => {
+        this.props.onSubmit(params);
+    };
 
     // handleCountryCodeChange = (countryCode) => {
 
@@ -66,14 +75,14 @@ export default class App extends ReactQueryParams {
     //     })
     // };
 
-    handlePassSync(value) {
+   /* handlePassSync(value) {
         this.setState({
             leadData: {
                 ...this.state.leadData,
                 password: value
             }
         });
-    }
+    }*/
 
     pageHandler(page) {
         window.scrollTo(0, 0);
@@ -101,7 +110,7 @@ export default class App extends ReactQueryParams {
 
     }
 
-    updateState(countryCode, version, phonePrefix, lang) {
+    /*updateState(countryCode, version, phonePrefix, lang) {
         this.setState({
             version: version,
             countryCode: countryCode,
@@ -284,36 +293,41 @@ export default class App extends ReactQueryParams {
 
             });
         });
-    };
+    };*/
 
     render() {
-        let page = this.state.page;
+        /*let page = this.state.page;*/
 
-        if (this.state.version) {
-            if (this.state.page === 'main') {
-                return (
-                    <div className='App'>
-                        <TopSection form={this.state.leadData} handlePassSync={this.handlePassSync}
-                                    version={this.state.version} countryCode={this.state.countryCode}
-                                    handleStep={this.handleStep} step={this.state.step} handleSubmit={this.handleSubmit}
-                                    pageHandler={this.pageHandler}
-                                    handleForward={this.handleForward}/>
-                        <MidSection version={this.state.version}/>
-                        <BottomSection 
-                                    form={this.state.leadData} handlePassSync={this.handlePassSync}
-                                    version={this.state.version} countryCode={this.state.countryCode}
-                                    handleStep={this.handleStep} step={this.state.step} handleSubmit={this.handleSubmit}
-                                    pageHandler={this.pageHandler}
-                                    handleForward={this.handleForward}/>
-                    </div>
-                )
-            } else {
-                return (
-                    <Page page={this.state.page} pageHandler={this.pageHandler}></Page>
-                )
-            }
+        if (this.state.page === 'main') {
+            return (
+                <div className='App'>
+                    <TopSection
+                                countryCode={this.props.countryCode}
+                                handleStep={this.handleStep}
+                                step={this.state.step}
+                                handleSubmit={this.handleSubmit}
+                                pageHandler={this.pageHandler}
+                                handleForward={this.handleForward}
+                                languageManager={this.props.languageManager}
+                                validateParams={this.props.validateParams}/>
+
+                    <MidSection languageManager={this.props.languageManager}/>
+
+                    <BottomSection
+                        languageManager={this.props.languageManager}
+                        pageHandler={this.pageHandler}
+                        handleForward={this.handleForward}/>
+                </div>
+            )
+        } else {
+            return (
+                <Page page={this.state.page} pageHandler={this.pageHandler}></Page>
+            )
+        }
+        /*if (this.state.version) {
+
         } else {
             return null;
-        }
+        }*/
     }
 }
