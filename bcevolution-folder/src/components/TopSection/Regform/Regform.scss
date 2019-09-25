@@ -203,6 +203,12 @@
             }
         }
     }
+    & .errors {
+        color: #ff3215;
+        font-size: 14px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
 
     & .agreement {
         position: sticky;
@@ -485,7 +491,7 @@
 }
 
 .loading {
-    height: 30%;
+    width: 100%;
     margin: 4.8vw auto;
     animation-name: pulse;
     animation-duration: 3s;
