@@ -29,9 +29,28 @@
         }
     }
 
+    & .forw-wrapper_input {
+        position: relative;
+        .show-pass, .hide-pass {
+            position: absolute;
+            top: 50%;
+            background: url("./visibility.png") no-repeat center;
+            background-size: contain;
+            height: 16px;
+            width: 16px;
+            margin-top: -8px;
+            right: 15px;
+            cursor: pointer;
+        }
+        .hide-pass {
+            background: url("./eye.png") no-repeat center;
+            background-size: contain;
+        }
+    }
+
     & .req {
-        list-style-type: none;
         padding-inline-start: 0;
+        list-style-type: circle;
 
         & li {
             white-space: nowrap;
@@ -41,25 +60,6 @@
             margin-top: 10px;
             color: #3b3b3b;
             line-height: 1;
-            &:before {
-                content: url('./times.svg');
-                width: 0.4vw;
-                height: 0.4vw;
-                margin: 0 0.24vw;
-                display: inline-block;
-
-                @media (max-width: 1200px) {
-                    width: 0.5vw;
-                    height: 0.5vw;
-                    margin: 0 0.34vw;
-                }
-        
-                @media (max-width: 768px) {
-                    width: 2vw;
-                    height: 2vw;
-                    margin: 0 0.44vw;
-                }
-            }
 
             &.ok {
                 color: rgb(11, 214, 11);
@@ -75,6 +75,36 @@
                         height: 2.2vw;
                         margin: 0 0.44vw;
                     }
+                }
+            }
+        }
+    }
+
+    & .help-block {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        height: 16px;
+        .help-icon {
+            background: url("./help-round-button.png") no-repeat center right;
+            height: 16px;
+            width: 16px;
+            cursor: pointer;
+            .help-info {
+                position: absolute;
+                bottom: 100%;
+                right: 0;
+                display: none;
+                background: #201e1f;
+                color: #ffffff;
+                font-size: 14px;
+                padding: 5px 9px;
+                border-radius: 5px;
+                z-index: 5;
+            }
+            &:hover {
+                .help-info {
+                   display: block;
                 }
             }
         }
@@ -161,7 +191,8 @@
         }
 
         &.pass {
-            background-position: 0 -10vw; 
+            background-position: 0 -10vw;
+            margin-bottom: 0;
 
             @media (max-width: 1200px) {
                 background-position: 0 -15.24vw;
@@ -170,6 +201,9 @@
             @media (max-width: 768px) {
                 background-position: 0 -60vw;
             }
+        }
+        &.pass2 {
+            margin-bottom: 15px;
         }
 
         &:focus {

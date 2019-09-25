@@ -8,6 +8,8 @@ import * as errorMessage from '../../../helpers/errorMessage'
 
 import { ReactComponent as Mark } from './excl.svg'
 import logo from '../../BottomSection/logo.png'
+import showPass from './visibility.png'
+import hidePass from './eye.png'
 
 
 export default class Regform extends Component {
@@ -20,9 +22,12 @@ export default class Regform extends Component {
             email: "",
             check: false,
             password: "",
+            confirm_password: "",
             tel: "",
             agree_1: true,
-            agree_2: true
+            agree_2: true,
+            firstPassType: 'password',
+            secondPassType: 'password'
         };
 
         this.setTextInputRef = element => {
@@ -33,7 +38,32 @@ export default class Regform extends Component {
         this.infoBox = React.createRef();
         this.handleBackwards = this.handleBackwards.bind(this);
         this.handleSync = this.handleSync.bind(this);
+        this.comparisonInputs = this.comparisonInputs.bind(this);
     }
+
+    handleClick = (e) => {
+        /*console.log(e);
+        const stateInputType = e.target.getAttributes('data-input') + 'Type';
+        console.log(stateInputType);
+        this.setState((state) => ({
+            [stateInputType] : state[stateInputType] === 'password' ? 'hidden' : 'password'
+        }));*/
+        if (e.target.getAttribute('data-type') == 'firstPassType') {
+            console.log(true)
+            this.setState(({firstPassType}) => ({
+                firstPassType: firstPassType === 'text' ? 'password' : 'text'
+            }));
+        } else {
+            this.setState(({secondPassType}) => ({
+                secondPassType: secondPassType === 'text' ? 'password' : 'text'
+            }));
+        }
+    };
+
+    comparisonInputs = (e) => {
+        const target = e.target.value;
+        console.log(target);
+    };
 
     handleForward(e) {
         let form = e.target.parentElement;
@@ -53,6 +83,7 @@ export default class Regform extends Component {
             }
             // Step 2
             else if (this.props.step === 2){
+
                 paramsToValidate = {
                     password: this.state.password
                 };
@@ -206,12 +237,26 @@ export default class Regform extends Component {
                             {this.state.errors && <div className="errors" style={{color: '#ff3215'}}>
                                 {this.state.errors[0]}
                             </div>}
-                            <input className="inputfield pass" type="password" maxLength="10" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="password" placeholder={languageManager.pass}/>
-                            {/*<ul className='req'>
+                            <div className="forw-wrapper_input">
+                                <input className="inputfield pass" type={this.state.firstPassType} maxLength="10" onChange={(e) => {this.handleStepChange(e.target.name, e.target.value); this.comparisonInputs();}} name="password" placeholder={languageManager.pass}/>
+                                <span onClick={this.handleClick} data-type="firstPassType" className={this.state.firstPassType === 'password' ? 'show-pass' : 'hide-pass'}></span>
+                            </div>
+                            <div className="help-block">
+                                <div className="help-icon">
+                                    <div className="help-info">
+                                        <p>{languageManager.morebox}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="forw-wrapper_input pass2">
+                                <input className="inputfield pass" type={this.state.secondPassType} maxLength="10" onChange={(e) => {this.handleStepChange(e.target.name, e.target.value); this.comparisonInputs();}} name="confirm_password" placeholder={languageManager.pass2}/>
+                                <span onClick={this.handleClick} data-type="secondPassType" className={this.state.secondPassType === 'password' ? 'show-pass' : 'hide-pass'}></span>
+                            </div>
+                            <ul className='req'>
                                 {languageManager.passtest.map(li => {
                                     return (<li key={li}>{li}</li>)
                                 })}
-                            </ul>*/}
+                            </ul>
                             <button onClick={this.handleForward.bind(this)} className='start'>{languageManager.button}</button>
                         </div>
                         <div className='form-wrapper three'>
