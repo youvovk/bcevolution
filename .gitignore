@@ -3,10 +3,10 @@
 # dependencies
 bcevolution-folder/node_modules
 lp-framework-master/node_modules
+/lp-framework-master
 /node_modules
 /.pnp
 .pnp.js
-package-lock.json
 .idea
 
 # testing
