@@ -60,15 +60,37 @@
             margin-top: 10px;
             color: #3b3b3b;
             line-height: 1;
+            position: relative;
+            padding-left: 10px;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: #3b3b3b;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                left: 0;
 
+            }
             &.ok {
                 color: rgb(11, 214, 11);
 
                 &:before {
-                    content: url('./check.svg');
-                    width: 0.55vw;
-                    height: 0.55vw;
-                    display: inline-block;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    color: rgb(11, 214, 11);
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                    left: 0;
 
                     @media (max-width: 768px) {
                         width: 2.2vw;
