@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
 import IntlTelInput from 'react-intl-tel-input'
 import 'react-intl-tel-input/dist/main.css'
 
 import { ReactComponent as Mark } from './excl.svg'
+import logo from '../../BottomSection/logo.png'
 
 
 export default class Regform extends Component {
@@ -55,9 +57,7 @@ export default class Regform extends Component {
 
     handleForward = (e) => {
         let form = e.target.parentElement;
-
         let paramsToValidate = {};
-
 
         // Step 1
         if(this.props.step === 1){
@@ -81,17 +81,6 @@ export default class Regform extends Component {
         }
         else if (this.props.step === 2){
 
-            /*let tel = form.querySelector('.tel');
-            let dialCode = document.getElementsByClassName(".selected-dial-code");
-
-            let phone_number = dialCode.innerHTML + tel.value;
-            phone_number = tel.value;
-            console.log(phone_number);
-
-            paramsToValidate = {
-                phone_number: phone_number
-            };*/
-
             if (this.state.confirm_password === this.state.password) {
                 paramsToValidate = {
                     password: this.state.password
@@ -102,7 +91,9 @@ export default class Regform extends Component {
                 })
                 return this.state.errors
             }
+
             let submitResponse = this.props.validateParams(paramsToValidate);
+            console.log(this.props)
 
             if (submitResponse.success) {
                 this.props.handleForward(paramsToValidate);
@@ -113,53 +104,25 @@ export default class Regform extends Component {
                     errors: submitResponse.errors
                 })
             }
-
-
-
-
-            /*console.log(this.state.confirm_password);
-            paramsToValidate = {
-                password: this.state.password
-            };*/
         }
-        // Step 1 or 2
-        /*if(this.props.step === 1 || this.props.step === 2){
 
-            // Step 2
-
-
-            console.log(this.props.step);
-
-
-            let submitResponse = this.props.validateParams(paramsToValidate);
-
-            if (submitResponse.success) {
-                this.props.handleForward(paramsToValidate);
-                this.props.handleStep(this.props.step + 1);
-            }
-            else{
-                this.setState({
-                    errors: submitResponse.errors
-                })
-            }
-        }*/
         // Step 3
         else if (this.props.step === 3){
 
             let tel = form.querySelector('.tel');
             let phone_number = tel.value;
 
+
             paramsToValidate = {
                 phone_number: phone_number,
                 phone_country_prefix: this.state.phone_country_prefix
             };
-            console.log(paramsToValidate);
 
             let submitResponse = this.props.validateParams(paramsToValidate);
 
             if (submitResponse.success) {
                 this.props.handleSubmit(paramsToValidate);
-
+                this.props.handleStep(this.props.step + 1);
             }
             else{
                 this.setState({
@@ -167,7 +130,6 @@ export default class Regform extends Component {
                 })
             }
         }
-
     }
 
 
@@ -178,7 +140,7 @@ export default class Regform extends Component {
         forms.map(form => {
             let steps = [...form.querySelectorAll('.form-wrapper')];
             steps.map((step, index) => {
-                for (let i=1;i<=back;i++) {
+                for (let i=0;i<=back;i++) {
                     step.classList.remove('step');
                 }
             })
@@ -211,112 +173,107 @@ export default class Regform extends Component {
     }
 
     componentDidMount() {
-        /*let inputs = [...document.querySelectorAll('.inputfield')];
 
-        inputs.map(input => {
-            input.addEventListener('change', this.handleSync);
-        })*/
-        /*this.phone_country_prefix = document.getElementsByClassName('selected-dial-code')*/
     }
 
     handleStepChange = (name, value) => {
+        let errors = null;
+        if (name === 'password') {
+            const submitResponse = this.props.validateParams({
+                password: value
+            });
 
-        console.log(name, value);
-        this.setState({[name]: value, errors: null}, () => {
-
-            console.log(this.state);
-
-            if(name === "password"){
-                let submitResponse = this.props.validateParams({
-                    password: value
-                });
-
-                if (!submitResponse.success) {
-                    this.setState({
-                        errors: submitResponse.errors
-                    })
-                }
-                else{
-                    this.setState({
-                        errors: null
-                    })
-                }
+            if (!submitResponse.success) {
+                errors = submitResponse.errors;
             }
-        });
+        }
+        this.setState({[name]: value, errors});
+        console.log(errors);
+
+
     };
 
     render() {
 
         let languageManager = this.props.languageManager();
 
-        return (
-            <div className={"Regform " + (this.props.class ? this.props.class : '')} ref={this.setTextInputRef}>
-                <div className="steps">
-                    {[1,2,3].map(index => {
-                        if(index <= this.props.step-1) {
-                            return (
-                                <div className="num check" key={index} index={index} onClick={this.handleBackwards}>✓</div>
-                            )
-                        } else {
-                            return (
-                                <div className="num" key={index}>{index}</div>
-                            )
-                        }
-                    })}
-                </div>
-                <div className='inner'>
-                    <div className='form-wrapper one'>
-                        {this.state.errors && <div className="errors">
-                            {this.state.errors[0]}
-                        </div>}
-                        <input className="inputfield fname" type="text" name="first_name" placeholder={languageManager.fname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
-                        <input className="inputfield lname" type="text" name="last_name" placeholder={languageManager.lname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
-                        <input className="inputfield email" type="text" name="email" placeholder={languageManager.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
-                        <button onClick={this.handleForward} className='start'>{languageManager.button}</button>
+        if (this.props.step <= 3) {
+            return (
+                <div className={"Regform " + (this.props.class ? this.props.class : '')} ref={this.setTextInputRef}>
+                    <div className="steps">
+                        {[1,2,3].map(index => {
+                            if(index <= this.props.step-1) {
+                                return (
+                                    <div className="num check" key={index} index={index} onClick={this.handleBackwards}>✓</div>
+                                )
+                            } else {
+                                return (
+                                    <div className="num" key={index}>{index}</div>
+                                )
+                            }
+                        })}
                     </div>
-                    <div className='form-wrapper two'>
-                        {this.state.errors && <div className="errors">
-                            {this.state.errors[0]}
-                        </div>}
-                        <div className="forw-wrapper_input">
-                            <input className="inputfield pass" type={this.state.firstPassType} maxLength="10" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="password" placeholder={languageManager.pass}/>
-                            <span onClick={this.handleClick} data-type="firstPassType" className={this.state.firstPassType === 'password' ? 'show-pass' : 'hide-pass'}></span>
+                    <div className='inner'>
+                        <div className='form-wrapper one'>
+                            {this.state.errors && <div className="errors">
+                                {this.state.errors[0]}
+                            </div>}
+                            <input className="inputfield fname" type="text" name="first_name" placeholder={languageManager.fname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
+                            <input className="inputfield lname" type="text" name="last_name" placeholder={languageManager.lname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
+                            <input className="inputfield email" type="text" name="email" placeholder={languageManager.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
+                            <button onClick={this.handleForward} className='start'>{languageManager.button}</button>
                         </div>
-                        <div className="help-block">
-                            <div className="help-icon">
-                                <div className="help-info">
-                                    <p>{languageManager.morebox}</p>
+                        <div className='form-wrapper two'>
+                            {this.state.errors && <div className="errors">
+                                {this.state.errors[0]}
+                            </div>}
+                            <div className="forw-wrapper_input">
+                                <input className="inputfield pass" type={this.state.firstPassType} maxLength="10" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="password" placeholder={languageManager.pass}/>
+                                <span onClick={this.handleClick} data-type="firstPassType" className={this.state.firstPassType === 'password' ? 'show-pass' : 'hide-pass'}></span>
+                            </div>
+                            <div className="help-block">
+                                <div className="help-icon">
+                                    <div className="help-info">
+                                        <p>{languageManager.morebox}</p>
+                                    </div>
                                 </div>
                             </div>
+                            <div className="forw-wrapper_input pass2">
+                                <input className="inputfield pass" type={this.state.secondPassType} maxLength="10" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="confirm_password" placeholder={languageManager.pass2}/>
+                                <span onClick={this.handleClick} data-type="secondPassType" className={this.state.secondPassType === 'password' ? 'show-pass' : 'hide-pass'}></span>
+                            </div>
+                            <ul className='req'>
+                                {languageManager.passtest.map(li => {
+                                    return (<li key={li} className="list">{li}</li>)
+                                })}
+                            </ul>
+                            <button onClick={this.handleForward} className='start'>{languageManager.button}</button>
                         </div>
-                        <div className="forw-wrapper_input pass2">
-                            <input className="inputfield pass" type={this.state.secondPassType} maxLength="10" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="confirm_password" placeholder={languageManager.pass2}/>
-                            <span onClick={this.handleClick} data-type="secondPassType" className={this.state.secondPassType === 'password' ? 'show-pass' : 'hide-pass'}></span>
+                        <div className='form-wrapper three'>
+                            {this.state.errors && <div className="errors">
+                                {this.state.errors[0]}
+                            </div>}
+                            <IntlTelInput
+                                preferredCountries={[this.props.countryCode]}
+                                containerClassName="intl-tel-input"
+                                inputClassName="inputfield tel"
+                                autoPlaceholder={true}
+                                separateDialCode={true}
+                                onSelectFlag={this.handleSelectFlag}
+                            />
+                            <button onClick={this.handleForward} className='start' >{languageManager.button_last}</button>
                         </div>
-                        <ul className='req'>
-                            {languageManager.passtest.map(li => {
-                                return (<li key={li}>{li}</li>)
-                            })}
-                        </ul>
-                        <button onClick={this.handleForward} className='start'>{languageManager.button}</button>
                     </div>
-                    <div className='form-wrapper three'>
-                        {this.state.errors && <div className="errors">
-                            {this.state.errors[0]}
-                        </div>}
-                        <IntlTelInput
-                            preferredCountries={[this.props.countryCode]}
-                            containerClassName="intl-tel-input"
-                            inputClassName="inputfield tel"
-                            autoPlaceholder={true}
-                            separateDialCode={true}
-                            onSelectFlag={this.handleSelectFlag}
-                        />
-                        <button onClick={this.handleForward} className='start' >{languageManager.button_last}</button>
-                    </div>
+                    <div className="error"><Mark className='excl'/><span></span></div>
                 </div>
-                <div className="error"><Mark className='excl'/><span></span></div>
-            </div>
-        )
+            )
+        }else {
+            return (
+                <div className={"Regform " + (this.props.class ? this.props.class : '')} ref={this.setTextInputRef}>
+                    <img src={logo} alt="lodaing" className="loading"/>
+                </div>
+            )
+
+        }
     }
 }

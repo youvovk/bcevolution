@@ -41,10 +41,10 @@
     "button": "Next >",
     "button_last": "REGISTER NOW",
     "passtest": [
-      "Only alphanumeric characters are allowed.",
-      "The password must be 6-9 characters long.",
+      "The password must be 8 characters long.",
       "Must contain at least 1 letter.",
-      "Must contain at least 1 number."
+      "Must contain at least 1 number.",
+      "Must contain at least 1 capital letter."
     ],
     "morebox": "Example: 12John34",
     "bcbid": [
