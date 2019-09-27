@@ -50,7 +50,7 @@ export default class Regform extends Component {
 
         this.state.phone_country_prefix = '+' + country.dialCode;
 
-    }
+    };
 
     handleForward = (e) => {
         let form = e.target.parentElement;
@@ -187,8 +187,8 @@ export default class Regform extends Component {
             let staticErrors = [
                 "The password must be 8 characters long",
                 "Must contain at least 1 small letter",
+                "Must contain at least 1 number",
                 "Must contain at least 1 capital letter",
-                "Must contain at least 1 number"
             ]
 
             submitErrs.push(submitResponse.errors);
@@ -199,7 +199,6 @@ export default class Regform extends Component {
                 return errorsIndexesArray;
             }, []);
 
-            console.log(errorIndexes);
             this.setState({ errorIndexes });
         }
         this.setState({[name]: value, errors});
