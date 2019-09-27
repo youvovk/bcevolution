@@ -38,15 +38,12 @@ export default class Regform extends Component {
     }
 
     handleClick = (e) => {
-        if (e.target.getAttribute('data-type') === 'firstPassType') {
-            this.setState(({firstPassType}) => ({
-                firstPassType: firstPassType === 'text' ? 'password' : 'text'
-            }));
-        } else {
-            this.setState(({secondPassType}) => ({
-                secondPassType: secondPassType === 'text' ? 'password' : 'text'
-            }));
-        }
+
+        const input = e.target.getAttribute('data-type');
+        this.setState((state) => ({
+            [input] : state[input] === 'password' ? 'text' : 'password'
+        }));
+
     };
 
     handleSelectFlag = (num, country) => {
