@@ -58,15 +58,18 @@
             font-weight: 600;
             font-size: .8em;
             margin-top: 10px;
-            color: #ff0000;
             line-height: 1;
             position: relative;
             padding-left: 10px;
+        }
+        & .list {
+            color: #ff0000;
+            position: relative;
             &:before {
                 content: "";
                 display: block;
                 position: absolute;
-                background: #3b3b3b;
+                background: #ff0000;
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
@@ -76,28 +79,22 @@
                 left: 0;
 
             }
-            &.ok {
-                color: rgb(11, 214, 11);
-
-                &:before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    color: rgb(11, 214, 11);
-                    width: 5px;
-                    height: 5px;
-                    border-radius: 50%;
-                    top: 0;
-                    bottom: 0;
-                    margin: auto 0;
-                    left: 0;
-
-                    @media (max-width: 768px) {
-                        width: 2.2vw;
-                        height: 2.2vw;
-                        margin: 0 0.44vw;
-                    }
-                }
+        }
+        & .ok {
+            color: #0bd60b;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: #0bd60b;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                left: 0;
             }
         }
     }
