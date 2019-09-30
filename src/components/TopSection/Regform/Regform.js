@@ -48,9 +48,21 @@ export default class Regform extends Component {
 
     handleSelectFlag = (num, country) => {
 
-        this.state.phone_country_prefix = '+' + country.dialCode;
+        this.setState({
+            phone_country_prefix: '+' + `${country.dialCode}`
+        })
 
     };
+
+    phoneNumberBlur = (status, value, countryData) => {
+        this.setState({
+            phone_country_prefix: '+' + `${countryData.dialCode}`
+        })
+    }
+
+    phoneValidate = (value) => {
+        return !/[^0-9\-\/]/.test(value);
+    }
 
     handleForward = (e) => {
         let form = e.target.parentElement;
@@ -107,7 +119,13 @@ export default class Regform extends Component {
             let tel = form.querySelector('.tel');
             let phone_number = tel.value;
 
-            if (phone_number.length > 3) {
+            if (!this.phoneValidate(phone_number)) {
+                this.setState({
+                    errors: ['Enter only number']
+                });
+                return this.state.errors
+            }
+            else if (phone_number.length > 3) {
                 paramsToValidate = {
                     phone_number: phone_number,
                     phone_country_prefix: this.state.phone_country_prefix
@@ -263,9 +281,9 @@ export default class Regform extends Component {
                             <button onClick={this.handleForward} className='start'>{languageManager.button}</button>
                         </div>
                         <div className='form-wrapper three'>
-                           {/* {this.state.errors && <div className="errors">
+                            {this.state.errors && <div className="errors">
                                 {this.state.errors[0]}
-                            </div>}*/}
+                            </div>}
                             <IntlTelInput
                                 preferredCountries={[this.props.countryCode]}
                                 containerClassName="intl-tel-input"
@@ -273,6 +291,7 @@ export default class Regform extends Component {
                                 autoPlaceholder={true}
                                 separateDialCode={true}
                                 onSelectFlag={this.handleSelectFlag}
+                                onPhoneNumberBlur={this.phoneNumberBlur}
                             />
                             <button onClick={this.handleForward} className='start' >{languageManager.button_last}</button>
                         </div>
