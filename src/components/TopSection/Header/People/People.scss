@@ -1,0 +1,25 @@
+.People {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .circle-photo {
+        width: 57px;
+        height: 57px;
+        border-radius: 50%;
+    }
+    .notification-text {
+        width: 177px;
+        p {
+            color: #ffffff;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1.1;
+            &:first-child {
+                font-size: 14px;
+                margin-top: 5px;
+                font-weight: 700;
+            }
+        }
+    }
+}

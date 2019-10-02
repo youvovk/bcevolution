@@ -1,0 +1,119 @@
+.Review {
+    background: #f7f8fa;
+    .review-title {
+        position: relative;
+        height: 200px;
+        ul {
+            display: flex;
+            list-style-type: none;
+            padding-left: 0;
+            li {
+                width: 20%;
+                padding: 0;
+                margin: 0;
+                height: 200px;
+                &:first-child {
+                    background: url("images/testimonial1.jpg") no-repeat top center;
+                    background-size: cover;
+                }
+                &:nth-child(2) {
+                    background: url("images/testimonial2.jpg") no-repeat top center;
+                    background-size: cover;
+                }
+                &:nth-child(3) {
+                    background: url("images/testimonial3.jpg") no-repeat top center;
+                    background-size: cover;
+                }
+                &:nth-child(4) {
+                    background: url("images/testimonial4.jpg") no-repeat top center;
+                    background-size: cover;
+                }
+                &:nth-child(5) {
+                    background: url("images/testimonial5.jpg") no-repeat top center;
+                    background-size: cover;
+                }
+            }
+        }
+        .opacity-block {
+            position: absolute;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            z-index: 2;
+            border: 1px #ffffff solid;
+            width: 100%;
+            padding: 15px 0;
+            p {
+                color: #292a2b;
+                font-weight: 900;
+                text-shadow: 1px 1.732px 4px rgba(0, 0, 0, 0.1);
+                font-size: 36px;
+                line-height: 1.1;
+                @media (max-width: 991px) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .review-block {
+        .border-block {
+            .border-line {
+                border-left: 1px solid #e0e0e0;
+                &:last-child {
+                    border-right: 1px solid #e0e0e0;
+                }
+                @media (max-width: 991px) {
+                    border: none;
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+
+        }
+        .person-block {
+            padding: 30px 14px;
+            @media (min-width: 1200px) {
+                min-height: 390px;
+            }
+        }
+        .person-card {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            img {
+                height: 96px;
+                padding-right: 10px;
+            }
+            @media (max-width: 991px) {
+                justify-content: center;
+            }
+        }
+        .person-name {
+            p {
+                color: #5c6164;
+                font-weight: 100;
+                padding: 0;
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.1;
+                &:first-child {
+                    color: #1c1e3a;
+                    font-weight: 900;
+                    padding: 0;
+                    font-size: 18px;
+                }
+            }
+        }
+        .review-text {
+            p {
+                color: #696d70;
+                text-align: center;
+                font-weight: 300;
+                font-size: 14px;
+                font-style: italic;
+            }
+        }
+    }
+}

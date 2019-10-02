@@ -1,0 +1,53 @@
+.HowItWorks {
+    background: url("images/howitworks.jpg") top left no-repeat, #023249;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    padding: 50px 0;
+
+    h2 {
+        text-align: center;
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 36px;
+        padding: 0;
+        margin: 0 0 30px 0;
+        line-height: 1.1;
+    }
+    .how-it-works {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            max-width: 100%;
+        }
+        .steps {
+            font-weight: 900;
+            color: #ff9a33;
+            font-size: 24px;
+            padding: 0;
+            margin: 20px 0 10px 0;
+            min-height: auto;
+            text-transform: uppercase;
+        }
+        .how-it-works_title {
+            p {
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 20px;
+                padding: 0;
+                margin: 0 0 20px 0;
+                min-height: 50px;
+                line-height: normal;
+                text-align: center;
+            }
+        }
+        .how-it-works-text {
+            p {
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+    }
+}

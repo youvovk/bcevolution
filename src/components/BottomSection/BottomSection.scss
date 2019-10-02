@@ -1,0 +1,39 @@
+.BottomSection {
+    & .footer {
+        background: #001924;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: 1px #00293f solid;
+        color: #335d75;
+
+        .links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            a {
+                color: #337ab7;
+                margin: 0 2px;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 1.4;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover {
+                    color: #23527c;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .copyright {
+                padding: 10px 0;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 1.42857143;
+            }
+        }
+    }
+}

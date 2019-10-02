@@ -1,0 +1,172 @@
+{
+  "en": {
+    "customer": [
+      {
+        "img": "chris",
+        "name": "Christopher G.",
+        "earn": "102"
+      },
+      {
+        "img": "isabel",
+        "name": "Isabel W.",
+        "earn": "60"
+      },
+      {
+        "img": "amelie",
+        "name": "Amelie J.",
+        "earn": "194"
+      },
+      {
+        "img": "kiyle",
+        "name": "Kyle S.",
+        "earn": "179"
+      }
+    ],
+    "title": "Le Crypto en a rendu riche plus d'un",
+    "subtitle": "Et vous pouvez devenir le prochain millionnaire...",
+    "subtitle2": [
+      "Découvrez ce que des personnes connues comme",
+      "Bill Gates",
+      " et ",
+      "Eric Schmidt",
+      " pensent à ce sujet"
+    ],
+    "topreg1": "Commencez à",
+    "topreg2": "changer votre vie",
+    "fname": "Prénom",
+    "lname": "Nom de famille",
+    "email": "Email",
+    "pass": "Mot de passe",
+    "pass2": "Confirmez le mot de passe",
+    "button": "L'étape suivante",
+    "button_last": "S'INSCRIRE MAINTENANT",
+    "passtest": [
+      "Le mot de passe doit comporter 8 caractères.",
+      "Doit contenir au moins 1 lettre.",
+      "Doit contenir au moins 1 chiffre.",
+      "Doit contenir au moins 1 lettre majuscule."
+    ],
+    "morebox": "Exemple: 12John34",
+    "bcbid": [
+      "bid",
+      "326.56"
+    ],
+    "bcask": [
+      "ask",
+      "329.52"
+    ],
+    "join_title": [
+      "Rejoignez-nous et commencez à vous enrichir avec",
+      "CryptoTrader!"
+    ],
+    "join_description": [
+      "Crypto Trader est un groupe réservé exclusivement aux personnes qui se sont ruées sur les bénéfices incroyables qu'offrent les Bitcoins, et ont ce faisant amassé une fortune en silence.Risk warning : Le trading des CFD peut entraîner des pertes d'argent importantes",
+      "Bitcoin Evolution Members enjoy retreats around the world every month while they make money on their laptop with just a few minutes of “work” every day."
+    ],
+    "descriptions": [
+      {
+        "img": "join1",
+        "name": "Une performance à la précision chirurgicale",
+        "text": "Aucune autre application de trading dans le monde n'atteint un niveau de précision de 99,4 %, comme en est capable Crypto Trader. C'est pour cela que nos membres du monde entier nous font confiance pour faire doubler, tripler, et quadrupler leur argent durement gagné."
+      },
+      {
+        "img": "join2",
+        "name": "Une technologie supérieure",
+        "text": "Le logiciel Crypto Trader a été créé avec les méthodes de programmation les plus avancées que le monde du trading ait jamais vues. Le logiciel devance les marchés de 0.01 seconde. Et si vous connaissez ne serait-ce qu'un peu le trading, vous savez que c'est loin d'être sans importance. Ce « saut dans le temps » fait de ce logiciel l'application de trading la plus consistante de la planète."
+      },
+      {
+        "img": "join3",
+        "name": "Une application de trading primée",
+        "text": "L'application Crypto Trader a gagné de nombreux prix. Le prix le plus récent que nous ayons eu l'honneur de recevoir, est d'avoir été obtenu la première place dans la catégorie logiciels de trading par l'association US Trading Association."
+      }
+    ],
+    "review_title": "Voici des témoignages de certains de nos membres qui s'appuient sur notre logiciel pour financer leurs style de vie luxueux :",
+    "review_body": [
+      {
+        "img": "testimoniala",
+        "name": "Jules K.",
+        "place": "Paris",
+        "text": "\"Cela ne fait que 47 jours que je suis un membre de Crypto Trader. Mais ma vie a déjà changé ! J'ai non seulement gagné mes premiers €10Kmais j'ai également rencontré des personnes extraordinaires ce faisant. Merci, Crypto Trader !\""
+      },
+      {
+        "img": "testimonialb",
+        "name": "Elsa J.",
+        "place": "Marseille",
+        "text": "\"Je sais maintenant enfin ce qu'est la vie de rêve. Je n'ai plus l'impression de me trouver à l'écart, à regarder les autres s'amuser. Crypto Trader m'a permis de prendre ma retraite plus tôt et de vivre la vie des 1 %.\""
+      },
+      {
+        "img": "testimonialc",
+        "name": "Tom S.",
+        "place": "Nice",
+        "text": "\"Il est assez surprenant de penser que j'ai été un investisseur à Wall Street, et que je n'ai jamais rien vu de tel au cours de mes 10 ans dans l'entreprise. Mes collègues ont tous crus que j'étais fou lorsque j'ai quitté l'entreprise pour investir à temps plein avec le software Crypto Trader. €38,459 de bénéfices plus tard, tous mes collègues me SUPPLIENT maintenant de les y initier.\""
+      },
+      {
+        "img": "testimoniald",
+        "name": "Mastien P.",
+        "place": "Paris",
+        "text": "\"Je me suis fait licencier de mon travail il y a deux semaines. N'ayant pas d'autres options à ma disposition, je croyais que ma vie était finie. Maintenant, je gagne €1,261.42 par jour, tous les jours. Et pour la première fois en 2 mois, mon compte bancaire n'est pas dans le rouge. Merci, Crypto Trader!\""
+      }
+    ],
+    "how_it_works_title": "Comment ça marche",
+    "how_it_works_information": [
+      {
+        "img": "step1",
+        "title": [
+          "Remplissez le formulaire d'inscription",
+          "sur cette page"
+        ],
+        "description": "Une fois que votre inscription est acceptée, vous deviendrez automatiquement le nouveau membre de Crypto Trader. Cela signifie que vous pourrez recevoir gratuitement notre logiciel exclusif de trading en bitcoins."
+      },
+      {
+        "img": "step2",
+        "title": [
+          "Approvisionnez votre compte"
+        ],
+        "description": "Comme pour toute entreprise, vous avez besoin de capital d'exploitation pour débuter. Ainsi, pour commencer à gagner de l'argent avec Crypto Trader, vous devez investir une somme de"
+      },
+      {
+        "img": "step3",
+        "title": [
+          "Commencez à gagner de l'argent"
+        ],
+        "description": "Cliquez sur trade pour profiter du trading « mains libres » exact et précis alimenté par notre algorithme primé. Vous pouvez également régler le trading en mode manuel si vous préférez effectuer le trading par vous-même."
+      }
+    ],
+    "qna_title": "Foire aux questions",
+    "qna_question": [
+      {
+        "q": "À quels types de résultats dois-je m'attendre ?",
+        "a": "Les membres de Crypto Trader font en général un bénéfice de €1,300 par jour."
+      },
+      {
+        "q": "Combien d'heures par jour vais-je devoir consacrer à ce travail ?",
+        "a": "Nos membres travaillent en moyenne 20 minutes ou moins par jour. Comme le logiciel s'occupe du trading, la quantité de « travail » nécessaire est minime."
+      },
+      {
+        "q": "Quel est le montant maximal que je peux gagner?",
+        "a": "Avec Crypto Trader, vos gains sont illimités. Certains membres gagnent leur premier million en tout juste 61 jours."
+      },
+      {
+        "q": "Quel est le prix du logiciel ?",
+        "a": "Les membres de Crypto Trader obtiennent gratuitement une copie de notre logiciel exclusif. Pour devenir membre, remplissez simplement le formulaire sur cette page."
+      },
+      {
+        "q": "Est-ce similaire à la vente multiniveau ou au marketing d'affiliation ?",
+        "a": "Ça n'a rien à voir avec la vente multiniveau, le marketing d'affiliation, ou quoi que ce soit d'autre d'existant. Le logiciel est alimenté par un algorithme innovant, qui remporte les transactions avec une précision de 99,4 %."
+      },
+      {
+        "q": "Y a-t-il des frais ?",
+        "a": "Il n'y a pas de frais cachés. Pas de frais de courtiers ou de commissions. Tout votre argent vous appartient à 100 %, et vous êtes libre de le retirer à tout moment sans aucun délai."
+      }
+    ],
+    "last_btn": "Commencez tout de suite !",
+    "risk": [
+      "ATTENTION:",
+      "En raison de la forte demande des médias, nous fermerons l’enregistrement à partir de ",
+      " - SE DÉPÊCHER!"
+    ],
+    "exclusive": [
+      "Exclusif pour les personnes résidant en"
+    ]
+  }
+}
