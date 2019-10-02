@@ -262,9 +262,9 @@ export default class Regform extends Component {
                     </div>
                     <div className='inner'>
                         <div className='form-wrapper one'>
-                            {/*{this.state.errors && <div className="errors">
+                            {this.state.errors && <div className="errors">
                                 {this.state.errors[0]}
-                            </div>}*/}
+                            </div>}
                             <input className="inputfield fname" type="text" name="first_name" placeholder={languageManager.fname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
                             <input className="inputfield lname" type="text" name="last_name" placeholder={languageManager.lname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
                             <input className="inputfield email" type="text" name="email" placeholder={languageManager.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
@@ -312,7 +312,7 @@ export default class Regform extends Component {
                             <button onClick={this.handleForward} className='start' >{languageManager.button_last}</button>
                         </div>
                     </div>
-                    {/*<div className="error"><Mark className='excl'/><span></span></div>*/}
+                    <div className="error"><Mark className='excl'/><span></span></div>
                 </div>
             )
         }else {
