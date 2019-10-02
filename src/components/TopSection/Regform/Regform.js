@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import * as validateInput from '../../../helpers/validateInput'
 import IntlTelInput from 'react-intl-tel-input'
 import 'react-intl-tel-input/dist/main.css'
 
@@ -119,10 +118,12 @@ export default class Regform extends Component {
             let tel = form.querySelector('.tel');
             let phone_number = tel.value;
 
+
             if (!this.phoneValidate(phone_number)) {
                 this.setState({
                     errors: ['Enter only number']
                 });
+                this.buttonBackward(e);
                 return this.state.errors
             }
             else if (phone_number.length > 3) {
@@ -140,18 +141,37 @@ export default class Regform extends Component {
                     this.setState({
                         errors: submitResponse.errors
                     })
+                    this.buttonBackward(e);
                 }
             }else {
                 this.setState({
                     errors: ['Enter phone number']
                 });
+                this.buttonBackward(e);
                 return this.state.errors
             }
         }
-    }
+    };
 
+    buttonBackward = (e) => {
+        e.preventDefault();
+        let back = 1;
+        let forms = [...document.querySelectorAll('.Regform')];
+        forms.map(form => {
+            let steps = [...form.querySelectorAll('.form-wrapper')];
+            steps.map((step, index) => {
+                for (let i=0;i<=back;i++) {
+                    step.classList.remove('step');
+                }
+            })
+        });
+
+        this.props.handleStep(1);
+
+    };
 
     handleBackwards(e) {
+        e.preventDefault();
         let back = parseInt(e.target.getAttribute('index'));
         let forms = [...document.querySelectorAll('.Regform')];
 
@@ -203,7 +223,7 @@ export default class Regform extends Component {
                 "Must contain at least 1 small letter",
                 "Must contain at least 1 number",
                 "Must contain at least 1 capital letter",
-            ]
+            ];
 
             submitErrs.push(submitResponse.errors);
 
@@ -242,20 +262,20 @@ export default class Regform extends Component {
                     </div>
                     <div className='inner'>
                         <div className='form-wrapper one'>
-                            {this.state.errors && <div className="errors">
+                            {/*{this.state.errors && <div className="errors">
                                 {this.state.errors[0]}
-                            </div>}
+                            </div>}*/}
                             <input className="inputfield fname" type="text" name="first_name" placeholder={languageManager.fname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
                             <input className="inputfield lname" type="text" name="last_name" placeholder={languageManager.lname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
                             <input className="inputfield email" type="text" name="email" placeholder={languageManager.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
                             <button onClick={this.handleForward} className='start'>{languageManager.button}</button>
                         </div>
                         <div className='form-wrapper two'>
-                            {this.state.errors && <div className="errors">
+                            {/*{this.state.errors && <div className="errors">
                                 {this.state.errors[0]}
-                            </div>}
+                            </div>}*/}
                             <div className="forw-wrapper_input">
-                                <input className="inputfield pass" type={this.state.firstPassType} maxLength="10" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="password" placeholder={languageManager.pass}/>
+                                <input className="inputfield pass" type={this.state.firstPassType} maxLength="8" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="password" placeholder={languageManager.pass}/>
                                 <span onClick={this.handleClick} data-type="firstPassType" className={this.state.firstPassType === 'password' ? 'show-pass' : 'hide-pass'}></span>
                             </div>
                             <div className="help-block">
@@ -266,7 +286,7 @@ export default class Regform extends Component {
                                 </div>
                             </div>
                             <div className="forw-wrapper_input pass2">
-                                <input className="inputfield pass" type={this.state.secondPassType} maxLength="10" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="confirm_password" placeholder={languageManager.pass2}/>
+                                <input className="inputfield pass" type={this.state.secondPassType} maxLength="8" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="confirm_password" placeholder={languageManager.pass2}/>
                                 <span onClick={this.handleClick} data-type="secondPassType" className={this.state.secondPassType === 'password' ? 'show-pass' : 'hide-pass'}></span>
                             </div>
                             <ul className='req'>
@@ -277,9 +297,9 @@ export default class Regform extends Component {
                             <button onClick={this.handleForward} className='start'>{languageManager.button}</button>
                         </div>
                         <div className='form-wrapper three'>
-                            {this.state.errors && <div className="errors">
+                            {/*{this.state.errors && <div className="errors">
                                 {this.state.errors[0]}
-                            </div>}
+                            </div>}*/}
                             <IntlTelInput
                                 preferredCountries={[this.props.countryCode]}
                                 containerClassName="intl-tel-input"
@@ -292,7 +312,7 @@ export default class Regform extends Component {
                             <button onClick={this.handleForward} className='start' >{languageManager.button_last}</button>
                         </div>
                     </div>
-                    <div className="error"><Mark className='excl'/><span></span></div>
+                    {/*<div className="error"><Mark className='excl'/><span></span></div>*/}
                 </div>
             )
         }else {
