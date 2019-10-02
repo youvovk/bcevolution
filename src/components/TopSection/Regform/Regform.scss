@@ -152,13 +152,24 @@
             background: linear-gradient(to bottom, #e4e4e4 0%, #c6c7c6 100%);
             border: 1px #cdcdcd solid;
             font-weight: 700;
-
-            &.check {
-                background: linear-gradient(to bottom, #740d92 0%, #01ba01 100%);
+            &:first-child {
+                background: linear-gradient(to bottom, #a110cb 0%, #740d92 100%);
                 color: #ffffff;
-                border-color: #08d908;
+                border-color: #0f810f;
                 text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.35);
             }
+        }
+        .check {
+            background: linear-gradient(to bottom, #740d92 0%, #01ba01 100%);
+            color: #ffffff;
+            border-color: #08d908;
+            text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.35);
+        }
+        .check + .num {
+            background: linear-gradient(to bottom, #a110cb 0%, #740d92 100%);
+            color: #ffffff;
+            border-color: #0f810f;
+            text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.35);
         }
     }
 

@@ -5,7 +5,6 @@ import VideoPlayer from './VideoPlayer/VideoPlayer.js'
 import Regform  from './Regform/Regform'
 
 import video from './en-1.mp4'
-import badges from './badges.png'
 
 
 export default class TopSection extends Component {
@@ -19,7 +18,6 @@ export default class TopSection extends Component {
     handleScroll() {
 
         let panel = this.regPanel.current;
-        console.log(panel.offsetTop)
 
         window.scrollTo({
             top: panel.offsetTop,
@@ -28,18 +26,6 @@ export default class TopSection extends Component {
         })
 
     }
-
-
-    /*componentDidMount() {
-
-
-        setTimeout(() => {
-            if (document.querySelector('.modalscreen') && window.innerWidth > 768) {
-                document.querySelector('.modalscreen').style.display = 'flex';
-            }
-        }, 
-        2000);
-    }*/
 
     render() {
         let languageManager = this.props.languageManager();

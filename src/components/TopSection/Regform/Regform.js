@@ -190,10 +190,6 @@ export default class Regform extends Component {
         })
     }
 
-    componentDidMount() {
-
-    }
-
     handleStepChange = (name, value) => {
         let errors = null;
         if (name === 'password') {
