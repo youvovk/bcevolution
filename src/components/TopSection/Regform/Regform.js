@@ -123,7 +123,6 @@ export default class Regform extends Component {
                 this.setState({
                     errors: ['Enter only number']
                 });
-                this.buttonBackward(e);
                 return this.state.errors
             }
             else if (phone_number.length > 3) {
@@ -141,33 +140,14 @@ export default class Regform extends Component {
                     this.setState({
                         errors: submitResponse.errors
                     })
-                    this.buttonBackward(e);
                 }
             }else {
                 this.setState({
                     errors: ['Enter phone number']
                 });
-                this.buttonBackward(e);
                 return this.state.errors
             }
         }
-    };
-
-    buttonBackward = (e) => {
-        e.preventDefault();
-        let back = 1;
-        let forms = [...document.querySelectorAll('.Regform')];
-        forms.map(form => {
-            let steps = [...form.querySelectorAll('.form-wrapper')];
-            steps.map((step, index) => {
-                for (let i=0;i<=back;i++) {
-                    step.classList.remove('step');
-                }
-            })
-        });
-
-        this.props.handleStep(1);
-
     };
 
     handleBackwards(e) {

@@ -33,7 +33,8 @@ export default class App extends ReactQueryParams {
     };
 
     handleSubmit = (params) => {
-        this.props.onSubmit(params);
+        this.props.onSubmit(params)
+        .then(() => this.setState({ step: 1 }))
     };
 
     pageHandler(page) {
