@@ -45,8 +45,8 @@ export default class People extends Component {
             <div className="People">
                 <img src={this.state.images[languageManager.customer[this.state.random].img]} alt="" className="circle-photo"/>
                 <div className="notification-text">
-                    <p className="person-name"><span>{languageManager.customer[this.state.random].name}</span> just made</p>
-                    <p className="person-bet"><span>$</span><span>{languageManager.customer[this.state.random].earn}</span></p>
+                    <p className="person-name"><span>{languageManager.customer[this.state.random].name}</span> {languageManager.invest}</p>
+                    <p className="person-bet"><span>{languageManager.currency}</span><span>{languageManager.customer[this.state.random].earn}</span></p>
                 </div>
             </div>
         )

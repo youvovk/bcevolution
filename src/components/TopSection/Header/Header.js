@@ -73,7 +73,7 @@ export default class Header extends Component {
                         <div className="col-lg-6 col-md-8 col-sm-12 hidden-md">
                             <div className="row">
                                 <div className="col-sm-6 exclusive">
-                                    <p>{languageManager.exclusive[0]}<br/><strong><span>Ukraine</span><br/>{languageManager.exclusive[1]}</strong></p>
+                                    <p>{languageManager.exclusive[0]}<br/><strong><span>{languageManager.exclusive[1]}</span><br/>{languageManager.exclusive[2]}</strong></p>
                                 </div>
                                 <div className="col-sm-6 notification-top">
                                     <People languageManager={this.props.languageManager}/>

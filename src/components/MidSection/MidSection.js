@@ -22,11 +22,11 @@ export default class MidSection extends Component {
                         <div className="row">
                             <div className="col-lg-5 bitcoin-block">
                                 <div className="bitcoin bid">
-                                    <p>{languageManager.bcbid[0]} <span>${languageManager.bcbid[1]}</span></p>
+                                    <p>{languageManager.bcbid[0]} <span>{languageManager.currency}{languageManager.bcbid[1]}</span></p>
                                     <img src={arrowBit} alt="arrow" className="bid-arrow"/>
                                 </div>
                                 <div className="bitcoin ask">
-                                    <p>{languageManager.bcask[0]} <span>${languageManager.bcask[1]}</span></p>
+                                    <p>{languageManager.bcask[0]} <span>{languageManager.currency}{languageManager.bcask[1]}</span></p>
                                     <img src={arrowAsk} alt="arrow" className="bid-arrow"/>
                                 </div>
                             </div>

@@ -81,13 +81,13 @@
             }
         }
         & .ok {
-            color: #0bd60b;
+            color: #008000;
             position: relative;
             &:before {
                 content: "";
                 display: block;
                 position: absolute;
-                background: #0bd60b;
+                background: #008000;
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
