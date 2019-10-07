@@ -1593,26 +1593,26 @@
         "earn": "179"
       }
     ],
-    "invest": "a gagné",
+    "invest": "juste fait",
     "currency": "€",
-    "title": "Le Crypto en a rendu riche plus d'un",
-    "subtitle": "Et vous pouvez devenir le prochain millionnaire...",
+    "title": "La crypto rend les gens riches",
+    "subtitle": "Et vous pouvez devenir le prochain millionnaire…",
     "subtitle2": [
-      "Découvrez ce que des personnes connues comme",
+      "Voir ce que les gens célèbres aiment",
       "Bill Gates",
       " et ",
       "Eric Schmidt",
-      " pensent à ce sujet"
+      " devoir dire"
     ],
-    "topreg1": "Commencez à",
-    "topreg2": "changer votre vie",
+    "topreg1": "COMMENCER À CHANGER",
+    "topreg2": "VOTRE VIE AUJOURD'HUI",
     "fname": "Prénom",
     "lname": "Nom de famille",
     "email": "Adresse mail",
     "pass": "Mot de passe",
     "pass2": "Mot de passe (répétez)",
-    "button": "L'étape suivante > >",
-    "button_last": "Inscrivez-vous dès maintenant",
+    "button": "COMMENCEZ À TRADER!",
+    "button_last": "COMMENCEZ À TRADER!",
     "passtest": [
       "Le mot de passe doit comporter entre 8 caractères.",
       "Doit contenir au moins 1 lettre.",
@@ -1633,51 +1633,51 @@
       "Bitcoin Evolution!"
     ],
     "join_description": [
-      "Bitcoin Evolution est un groupe réservé exclusivement aux personnes qui se sont ruées sur les bénéfices incroyables qu'offrent les Bitcoins, et ont ce faisant amassé une fortune en silence.",
-      "Les membres de Bitcoin Evolution profitent de voyages à travers le monde chaque mois, tandis qu'ils gagnent de l'argent derrière leurs ordinateurs portables avec seulement quelques minutes de « travail » par jour."
+      "Bitcoin Evolution est un groupe réservé exclusivement aux personnes ayant sauté sur les retours insensés que propose Bitcoin et qui ont discrètement amassé une fortune en le faisant.",
+      "Nos membres profitent de retraites dans le monde entier tous les mois, alors qu'ils gagnent de l'argent sur leur ordinateur portable avec seulement quelques minutes de «travail» chaque jour."
     ],
     "descriptions": [
       {
         "img": "join1",
-        "name": "Une performance à la précision chirurgicale",
-        "text": "Aucune autre application de trading dans le monde n'atteint un niveau de précision de 99,4 %, comme en est capable Bitcoin Evolution. C'est pour cela que nos membres du monde entier nous font confiance pour faire doubler, tripler, et quadrupler leur argent durement gagné."
+        "name": "PERFORMANCE PRÉCISE AU LASER",
+        "text": "Aucune autre application de trading au monde n'atteint le niveau de précision de 99,4% atteint par The Bitcoin Evolution. C’est pourquoi nos membres du monde entier nous font confiance pour doubler, tripler et quadrupler leur argent durement gagné."
       },
       {
         "img": "join2",
-        "name": "Une technologie supérieure",
-        "text": "Le logiciel Bitcoin Evolution a été créé avec les méthodes de programmation les plus avancées que le monde du trading ait jamais vues. Le logiciel devance les marchés de 0.01 seconde. Et si vous connaissez ne serait-ce qu'un peu le trading, vous savez que c'est loin d'être sans importance. Ce « saut dans le temps » fait de ce logiciel l'application de trading la plus consistante de la planète."
+        "name": "TECHNOLOGIE SUPÉRIEURE",
+        "text": "Bitcoin Evolution logiciel a été créé en utilisant la programmation la plus avancée que le monde du commerce a jamais vu. Le logiciel est en avance sur les marchés de 0,01 seconde. Et si vous savez quelque chose sur le trading, vous savez que c'est une affaire énorme. Ce «saut dans le temps» fait du logiciel l’application de trading la plus cohérente de la planète."
       },
       {
         "img": "join3",
-        "name": "Une application de trading primée",
-        "text": "L'application Bitcoin Evolution a gagné de nombreux prix. Le prix le plus récent que nous ayons eu l'honneur de recevoir, est d'avoir été obtenu la première place dans la catégorie logiciels de trading par l'association US Trading Association."
+        "name": "APPLICATION DE TRADING PRIMÉE",
+        "text": "Bitcoin Evolution L'application a remporté de nombreux prix. Le dernier prix que nous avons eu l'honneur de recevoir est le n ° 1 dans la catégorie des logiciels de trading pour la US Trading Association"
       }
     ],
-    "review_title": "Voici des témoignages de certains de nos membres qui s'appuient sur notre logiciel pour financer leurs style de vie luxueux :",
+    "review_title": "Écoutez nos membres qui comptent sur Notre logiciel pour financer leurs styles de vie de luxe",
     "review_body": [
       {
         "img": "testimoniala",
-        "name": "Jules K.",
+        "name": "Mark K.",
         "place": "Paris",
-        "text": "\"Cela ne fait que 47 jours que je suis un membre de Bitcoin Evolution. Mais ma vie a déjà changé ! J'ai non seulement gagné mes premiers €10Kmais j'ai également rencontré des personnes extraordinaires ce faisant. Merci, Bitcoin Evolution !\""
+        "text": "\"J'ai été membre du Bitcoin Evolution pour seulement 47 jours. Mais ma vie a déjà changé! Non seulement j'ai fait mon premier €10K, mais j'ai aussi rencontré certaines des personnes les plus incroyables du processus. Merci, Bitcoin Evolution!\""
       },
       {
         "img": "testimonialb",
-        "name": "Elsa J.",
-        "place": "Marseille",
-        "text": "\"Je sais maintenant enfin ce qu'est la vie de rêve. Je n'ai plus l'impression de me trouver à l'écart, à regarder les autres s'amuser. Bitcoin Evolution m'a permis de prendre ma retraite plus tôt et de vivre la vie des 1 %.\""
+        "name": "Jennifer A.",
+        "place": "Lyon",
+        "text": "\"Je sais enfin ce que c’est de vivre ce rêve. Je ne me sens plus comme à l’extérieur alors que tout le monde s’amuse. Bitcoin Evolution m'a permis de prendre ma retraite tôt et de vivre le style de vie de 1%\""
       },
       {
         "img": "testimonialc",
-        "name": "Tom S.",
-        "place": "Nice",
-        "text": "\"Il est assez surprenant de penser que j'ai été un investisseur à Wall Street, et que je n'ai jamais rien vu de tel au cours de mes 10 ans dans l'entreprise. Mes collègues ont tous crus que j'étais fou lorsque j'ai quitté l'entreprise pour investir à temps plein avec le software Bitcoin Evolution. €38,459 de bénéfices plus tard, tous mes collègues me SUPPLIENT maintenant de les y initier.\""
+        "name": "Madeleine L.",
+        "place": "Marseille",
+        "text": "\"Étonnamment, j'étais investisseur à Wall Street. Et je n’ai jamais rien vu de tel depuis 10 ans que je travaille à la société. Mes collègues ont tous pensé que j'étais fou quand j'ai quitté l'entreprise pour investir avec le Bitcoin Evolution logiciel à temps plein. €38,459 plus tard, tous mes collègues me demandent de les laisser entrer.\""
       },
       {
         "img": "testimoniald",
-        "name": "Mastien P.",
+        "name": "Fédéric H.",
         "place": "Paris",
-        "text": "\"Je me suis fait licencier de mon travail il y a deux semaines. N'ayant pas d'autres options à ma disposition, je croyais que ma vie était finie. Maintenant, je gagne €1,261.42 par jour, tous les jours. Et pour la première fois en 2 mois, mon compte bancaire n'est pas dans le rouge. Merci, Bitcoin Evolution !\""
+        "text": "\"Il y a deux semaines, j'ai été licencié. N'ayant plus aucune option, je pensais que ma vie était finie. Maintenant je fais plus €1,261.42 chaque jour. Et pour la première fois en 2 mois, mon compte n’est pas à découvert. Merci, Bitcoin Evolution!\""
       }
     ],
     "how_it_works_title": "Comment ça marche",
@@ -1686,63 +1686,63 @@
       {
         "img": "step1",
         "title": [
-          "Remplissez le formulaire d'inscription",
-          "sur cette page"
+          "Remplir l'inscription",
+          "Form sur cette page"
         ],
-        "description": "Une fois que votre inscription est acceptée, vous deviendrez automatiquement le nouveau membre de Bitcoin Evolution. Cela signifie que vous pourrez recevoir gratuitement notre logiciel exclusif de trading en bitcoins."
+        "description": "Une fois votre inscription acceptée, vous deviendrez automatiquement le membre le plus récent de The Bitcoin Evolution. Cela signifie que vous obtiendrez gratuitement notre logiciel de trading propriétaire Bitcoin."
       },
       {
         "img": "step2",
         "title": [
-          "Approvisionnez votre compte"
+          "Financer votre compte"
         ],
-        "description": "Comme pour toute entreprise, vous avez besoin de capital d'exploitation pour débuter. Ainsi, pour commencer à gagner de l'argent avec Bitcoin Evolution, vous devez investir une somme de €250 ou plus."
+        "description": "Comme toute entreprise, vous avez besoin de fonds de roulement pour commencer. Donc, pour commencer à tirer profit de laBitcoin Evolution, vous devez investir le montant que vous désirez €250 ou plus."
       },
       {
         "img": "step3",
         "title": [
-          "Commencez à gagner de l'argent"
+          "Commencez à profiter"
         ],
-        "description": "Cliquez sur trade pour profiter du trading « mains libres » exact et précis alimenté par notre algorithme primé. Vous pouvez également régler le trading en mode manuel si vous préférez effectuer le trading par vous-même."
+        "description": "Cliquez sur trade pour profiter d'un trading mains libres précis et précis, optimisé par notre algorithme primé. Vous pouvez également définir le commerce sur manuel si vous préférez négocier vous-même."
       }
     ],
-    "qna_title": "Foire aux questions",
+    "qna_title": "Questions fréquemment posées",
     "qna_question": [
       {
-        "q": "À quels types de résultats dois-je m'attendre ?",
-        "a": "Les membres de Bitcoin Evolution font en général un bénéfice de €1,300 par jour."
+        "q": "À quel genre de résultats puis-je m'attendre?",
+        "a": "Bitcoin Evolution les membres bénéficient généralement d'un minimum de €1,300 du quotidien."
       },
       {
-        "q": "Combien d'heures par jour vais-je devoir consacrer à ce travail ?",
-        "a": "Nos membres travaillent en moyenne 20 minutes ou moins par jour. Comme le logiciel s'occupe du trading, la quantité de « travail » nécessaire est minime."
+        "q": "Combien d'heures par jour dois-je travailler?",
+        "a": "Nos membres travaillent en moyenne 20 minutes par jour ou moins. Parce que le logiciel gère les échanges, la quantité de «travail» requise est minime."
       },
       {
-        "q": "Quel est le montant maximal que je peux gagner ?",
-        "a": "Avec Bitcoin Evolution, vos gains sont illimités. Certains membres gagnent leur premier million en tout juste 61 jours."
+        "q": "Quel est le montant maximum que je peux faire?",
+        "a": "Vos profits sont illimités dans leBitcoin Evolution. Certains membres ont gagné leur premier million en seulement 61 jours."
       },
       {
-        "q": "Quel est le prix du logiciel ?",
-        "a": "Les membres de Bitcoin Evolution obtiennent gratuitement une copie de notre logiciel exclusif. Pour devenir membre, remplissez simplement le formulaire sur cette page.\n\n"
+        "q": "Combien coûte le logiciel?",
+        "a": "Membres deBitcoin Evolution obtenez gratuitement une copie de notre logiciel propriétaire. Pour devenir membre, remplissez simplement le formulaire sur cette page."
       },
       {
-        "q": "Est-ce similaire à la vente multiniveau ou au marketing d'affiliation ?",
-        "a": "Ça n'a rien à voir avec la vente multiniveau, le marketing d'affiliation, ou quoi que ce soit d'autre d'existant. Le logiciel est alimenté par un algorithme innovant, qui remporte les transactions avec une précision de 99,4 %."
+        "q": "Est-ce comme le MLM ou le marketing d'affiliation?",
+        "a": "Ce n'est pas comme MLM, le marketing d'affiliation ou toute autre chose là-bas. Le logiciel est alimenté par un algorithme innovant qui permet de gagner des transactions avec une précision de 99,4%."
       },
       {
-        "q": "Y a-t-il des frais ?",
-        "a": "Il n'y a pas de frais cachés. Pas de frais de courtiers ou de commissions. Tout votre argent vous appartient à 100 %, et vous êtes libre de le retirer à tout moment sans aucun délai."
+        "q": "Y a-t-il des frais?",
+        "a": "Il n'y a pas de frais cachés. Aucun frais de courtage ou de commissions. Tout votre argent est à vous à 100% et vous êtes libre de le retirer à tout moment, à votre choix, sans délai."
       }
     ],
-    "last_btn": "Commencez tout de suite !!",
+    "last_btn": "COMMENCEZ À TRADER!",
     "risk": [
       "ATTENTION:",
-      "En raison de la forte demande des médias, nous fermerons l’enregistrement à partir de",
+      "En raison de la très forte demande des médias, nous clôturerons les inscriptions à compter du",
       " - SE DÉPÊCHER!"
     ],
     "exclusive": [
-      "Exclusif pour les personnes résidant en",
+      "EXCLUSIF POUR",
       "FRANCE",
-      "(Temporaire)"
+      "LES RÉSIDENTS"
     ]
   },
   "dk": {
