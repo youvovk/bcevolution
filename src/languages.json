@@ -172,7 +172,8 @@
       "Exclusive for",
       "English",
       "Residents"
-    ]
+    ],
+    "video": "en_1"
   },
   "no": {
     "customer": [
@@ -347,7 +348,8 @@
       "Bare for innbyggere i",
       "NORWAY",
       "(Midlertidig)"
-    ]
+    ],
+    "video": "en_1"
   },
   "sv": {
     "customer": [
@@ -522,7 +524,8 @@
       "EXKLUSIVT FÖR",
       "SWEDEN",
       "INVÅNARE"
-    ]
+    ],
+    "video": "en_1"
   },
   "fi": {
     "customer": [
@@ -697,7 +700,8 @@
       "Tarjolla vain maassa",
       "FINLAND",
       "asuville"
-    ]
+    ],
+    "video": "en_1"
   },
   "nl": {
     "customer": [
@@ -872,7 +876,8 @@
       "Exclusief voor",
       "NETHERLANDS",
       "INWONERS"
-    ]
+    ],
+    "video": "en_1"
   },
   "es": {
     "customer": [
@@ -1046,7 +1051,8 @@
     "exclusive": [
       "Exclusivo para",
       "SPAIN"
-    ]
+    ],
+    "video": "en_1"
   },
   "it": {
     "customer": [
@@ -1220,7 +1226,8 @@
       "IN ESCLUSIVA PER GLI",
       "ITALY",
       "(TEMPORANEO)"
-    ]
+    ],
+    "video": "en_1"
   },
   "pl": {
     "customer": [
@@ -1393,7 +1400,8 @@
     "exclusive": [
       "Tylko dla rezydentów",
       "POLAND"
-    ]
+    ],
+    "video": "en_1"
   },
   "de": {
     "customer": [
@@ -1568,7 +1576,8 @@
       "Exklusives Angebot für",
       "GERMANY",
       "Händler aus"
-    ]
+    ],
+    "video": "en_1"
   },
   "fr": {
     "customer": [
@@ -1743,7 +1752,8 @@
       "EXCLUSIF POUR",
       "FRANCE",
       "LES RÉSIDENTS"
-    ]
+    ],
+    "video": "fr_video"
   },
   "dk": {
     "customer": [
@@ -1918,6 +1928,7 @@
       "EKSKLUSIVT FOR",
       "DENMARK",
       "INDBYGGERE"
-    ]
+    ],
+    "video": "en_1"
   }
 }

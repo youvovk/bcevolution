@@ -4,12 +4,20 @@ import Header from './Header/Header'
 import VideoPlayer from './VideoPlayer/VideoPlayer.js'
 import Regform  from './Regform/Regform'
 
-import video from './en-1.mp4'
+import en_1 from './en_1.mp4'
+import fr_video from './fr_video.mp4'
 
 
 export default class TopSection extends Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            videos: {
+                en_1,
+                fr_video
+            }
+        };
 
         this.regPanel = React.createRef();
     }
@@ -46,7 +54,7 @@ export default class TopSection extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 col-md-7 col-sm-12">
-                                <VideoPlayer link={video} />
+                                <VideoPlayer link={this.state.videos[languageManager.video]} />
                             </div>
                             <div className="col-lg-4 col-md-5 col-sm-12">
                                 <div className="regform" ref={this.regPanel}>
