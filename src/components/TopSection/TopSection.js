@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import VideoPlayer from './VideoPlayer/VideoPlayer.js'
 import Regform  from './Regform/Regform'
+import FirstTitle  from './FirstTitle/FirstTitle'
 
 import video from './lp-en.mp4'
 
@@ -9,22 +10,10 @@ import video from './lp-en.mp4'
 export default class TopSection extends Component {
 
     render() {
-        let languageManager = this.props.languageManager();
 
         return (
             <div className='TopSection'>
-                <div className="headline">
-                    <div className="container">
-                        <div className="col-12">
-                            <div className="title">
-                                <h1>{languageManager.title}</h1>
-                            </div>
-                            <div className="subtitle">
-                                <h2>{languageManager.subtitle}</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <FirstTitle languageManager={this.props.languageManager} />
                 <div className="top-reg" id="top">
                     <div className="container">
                         <div className="row">
