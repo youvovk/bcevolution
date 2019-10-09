@@ -1,0 +1,20 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import LpFramework, {LpFrameworkWrapper} from '../lp-framework/dist/index'
+import './index.scss';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+
+ReactDOM.render(
+    <LpFramework
+        resourceFile={require('./languages.json')}
+        funnel_name={"test"}>
+        <LpFrameworkWrapper Component={App}/>
+    </LpFramework>,
+    document.getElementById('root')
+);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

@@ -1,0 +1,102 @@
+.Review {
+    padding: 80px 10px;
+    background-color: #fff;
+    h2 {
+        font-size: 29px;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #676770;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .subtitle {
+        margin-bottom: 14px;
+        color: #8e8e9c;
+        font-size: 18px;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        .nav-link {
+            padding: 12px 30px;
+            border-radius: 4px;
+            margin: 0 8px;
+            background-color: #92a0ad;
+            color: #fff;
+            font-size: 16px;
+            line-height: 21px;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all .3s ease;
+            &:hover {
+                background-color: #2e80b6;
+                color: #23527c;
+                text-decoration: underline;
+            }
+            &:focus {
+                background-color: #e9d600;
+            }
+        }
+    }
+    .author {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        img {
+            width: 80px;
+            margin-right: 14px;
+            border-radius: 100%;
+        }
+        .author-info {
+            .name {
+                color: #676770;
+                font-size: 32px;
+                line-height: 36px;
+                font-weight: 300;
+                margin-bottom: 0;
+            }
+            .status {
+                font-family: Inconsolata, monospace;
+                color: #bbb;
+                font-size: 12px;
+                text-align: left;
+            }
+        }
+    }
+    .description {
+        text-align: justify;
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 300;
+    }
+    .border-block {
+        margin-bottom: 30px;
+        padding: 14px;
+        border-bottom: 2px dotted #b6b6b6;
+        transition: .3s ease;
+        &:hover {
+            border-radius: 20px;
+            background-color: #eef3f8;
+        }
+    }
+    .img-block {
+        display: flex;
+        justify-content: center;
+        img {
+            height: 200px;
+            border-radius: 25px;
+        }
+    }
+}

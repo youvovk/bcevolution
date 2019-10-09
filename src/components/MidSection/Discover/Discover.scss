@@ -1,0 +1,77 @@
+.Discover {
+    background-color: #1d1d1d;
+    color: #fff;
+
+    h2 {
+        color: #ffffff;
+        font-size: 29px;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .news-main-box {
+        padding: 0;
+        .news-box {
+            height: 300px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            transition: all .3s ease;
+            &:hover {
+                padding-left: 12px;
+            }
+        }
+        & .news1 {
+            background-image: url("./img/businessinsider-logo.jpg"), linear-gradient(180deg, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/crypto-castle-san-francisco-1750.jpg");
+            background-position: 0px 0px, 0px 0px, 50% -36px;
+            background-size: 40px, auto, cover;
+            background-repeat: no-repeat, repeat, repeat;
+        }
+        & .news2 {
+            background-image: url("./img/data.jpg"), linear-gradient(180deg, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/safari.jpg");
+            background-position: 0px 0px, 0px 0px, 50% 50%;
+            background-size: 40px, auto, cover;
+            background-repeat: no-repeat, repeat, no-repeat;
+        }
+        & .news3 {
+            background-image: url("./img/forvs.png"), linear-gradient(180deg, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/bc.jpg");
+            background-position: 0px 0px, 0px 0px, 50% 50%;
+            background-size: 40px, auto, cover;
+            background-repeat: no-repeat, repeat, no-repeat;
+        }
+        & .news4 {
+            background-image: url("./img/forvs.png"), linear-gradient(180deg, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/shop.jpg");
+            background-position: 0px 0px, 0px 0px, 50% 50%;
+            background-size: 40px, auto, cover;
+            background-repeat: no-repeat, repeat, no-repeat;
+        }
+        .news-box-text {
+            padding-left: 11px;
+            border-left: 5px solid #e9d600;
+            color: #fdfeff;
+            font-size: 19px;
+            line-height: 25px;
+            text-align: left;
+            min-width: 412px;
+        }
+        .news-box-link {
+            color: #fff;
+            font-size: 13px;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px solid transparent;
+            margin-top: 10px;
+            transition: .3s ease;
+            &:hover {
+                color: #e9d600;
+                border-bottom: 1px solid #23527c;
+            }
+        }
+    }
+
+}

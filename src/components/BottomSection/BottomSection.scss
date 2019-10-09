@@ -1,0 +1,43 @@
+.BottomSection {
+    & .footer {
+        background: #233744;
+        padding: 35px 0;
+        color: #ffffff;
+
+        p {
+            font-size: 14px;
+            line-height: 25px;
+            font-weight: 300;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            a {
+                color: #fff;
+                text-align: center;
+                border-right: 1px solid #fff;
+                font-size: 14px;
+                margin-right: 15px;
+                padding-right: 15px;
+                line-height: 1;
+                border-right: 1px solid #fff;
+                text-transform: uppercase;
+                text-decoration: none;
+                margin-bottom: 10px;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

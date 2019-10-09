@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 1px solid #e9d600;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+p {
+  margin: 0;
+}
+@import './components/TopSection/TopSection.scss';
+@import './components/MidSection/MidSection.scss';
+@import './components/BottomSection/BottomSection.scss';
+@import './pages/Page.scss';
