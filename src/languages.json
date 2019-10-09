@@ -6,17 +6,9 @@
     "fname": "Your Full Name",
     "lname": "Your E-mail Address",
     "email": "Email",
-    "pass": "Mot de passe",
-    "pass2": "Confirmez le mot de passe",
+    "pass": "Choose Your Password",
     "button": "INSTANT ACCESS",
-    "button_last": "S'INSCRIRE MAINTENANT",
-    "passtest": [
-      "Le mot de passe doit comporter 8 caractères.",
-      "Doit contenir au moins 1 lettre.",
-      "Doit contenir au moins 1 chiffre.",
-      "Doit contenir au moins 1 lettre majuscule."
-    ],
-    "morebox": "Exemple: 12John34",
+    "button_last": "GIVE ME ACCESS",
     "first_information_block": [
       "Bitcoin Loophole takes advantage of the huge returns offered by minimal Bitcoin investments. Fortunes await software users that stay a step ahead of the charts, don’t wait!",
       "Each month members of this exclusive group are living it up in exotic locations in every corner of the globe. With no more than a few clicks a day, these individuals are fulfilling their dreams."

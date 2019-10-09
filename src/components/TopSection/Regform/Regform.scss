@@ -1,9 +1,18 @@
-.Regform, .FirstRegform {
+.Regform, .FirstRegform, .SecondRegform {
     position: relative;
+    text-align: center;
 
     .logo {
         width: 100%;
         margin-bottom: 15px;
+    }
+    .small {
+        width: 174px;
+        margin: 0 auto;
+    }
+    .hint {
+        width: 270px;
+        margin-bottom: 3px;
     }
 
     & .inner {
@@ -210,7 +219,6 @@
 
         &.pass {
             background-position: 0 -10vw;
-            margin-bottom: 0;
 
             @media (max-width: 1200px) {
                 background-position: 0 -15.24vw;
@@ -252,6 +260,10 @@
                 }
             }
         }
+    }
+    .small-input {
+        height: 35px;
+        margin-bottom: 3px;
     }
     & .errors {
         color: #ff3215;
@@ -455,11 +467,23 @@
         }
     }
 
+
+    .intl-tel-input .country-list {
+        background: #eeeeee;
+    }
+    .intl-tel-input .country-list .country {
+        color: #333333;
+    }
     .intl-tel-input.allow-dropdown.separate-dial-code .selected-dial-code {
         padding-left: 0;
         font-size: 16px;
         font-weight: 400;
-        color: #ffffff;
+        background: #eeeeee;
+        color: #333333;
+        border-top-left-radius: 22px;
+        border-bottom-left-radius: 22px;
+        overflow: hidden;
+        outline: none;
 
         @media (max-width: 1200px) {
             font-size: 1.4vw;
@@ -472,7 +496,7 @@
     }
 
     .intl-tel-input {
-        margin-bottom: 4vw;
+        margin-bottom: 20px;
         color: #ffffff;
     }
 }
