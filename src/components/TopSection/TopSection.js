@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import VideoPlayer from './VideoPlayer/VideoPlayer.js'
-import Regform  from './Regform/Regform'
+import FirstRegform  from './Regform/FirstRegform'
 import FirstTitle  from './FirstTitle/FirstTitle'
 
 import video from './lp-en.mp4'
@@ -22,7 +22,7 @@ export default class TopSection extends Component {
                             </div>
                             <div className="col-lg-4 col-md-5 col-sm-12">
                                 <div className="regform">
-                                    <Regform validateParams={this.props.validateParams} form={this.props.form} pageHandler={this.props.pageHandler} countryCode={this.props.countryCode} languageManager={this.props.languageManager} handleStep={this.props.handleStep} handleForward={this.props.handleForward} handleSubmit={this.props.handleSubmit} step={this.props.step}/>
+                                    <FirstRegform validateParams={this.props.validateParams} form={this.props.form} pageHandler={this.props.pageHandler} countryCode={this.props.countryCode} languageManager={this.props.languageManager} handleStep={this.props.handleStep} handleForward={this.props.handleForward} handleSubmit={this.props.handleSubmit} step={this.props.step}/>
                                 </div>
                             </div>
                         </div>

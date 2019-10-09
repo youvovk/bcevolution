@@ -6,7 +6,7 @@ import { ReactComponent as Mark } from './excl.svg'
 import logo from '../../BottomSection/logo.png'
 
 
-export default class Regform extends Component {
+export default class SecondRegform extends Component {
     constructor(props) {
         super(props);
 
@@ -153,7 +153,7 @@ export default class Regform extends Component {
     handleBackwards(e) {
         e.preventDefault();
         let back = parseInt(e.target.getAttribute('index'));
-        let forms = [...document.querySelectorAll('.Regform')];
+        let forms = [...document.querySelectorAll('.SecondRegform')];
 
         forms.map(form => {
             let steps = [...form.querySelectorAll('.form-wrapper')];
@@ -170,7 +170,7 @@ export default class Regform extends Component {
     handleSync(e) {
         let input = e.target.value;
         let inputClass = e.target.className;
-        let forms = [...document.querySelectorAll('.Regform')];
+        let forms = [...document.querySelectorAll('.SecondRegform')];
 
         forms.map(form => {
             form.getElementsByClassName(inputClass)[0].value = input;
@@ -178,7 +178,7 @@ export default class Regform extends Component {
     }
 
     componentDidUpdate() {
-        let forms = [...document.querySelectorAll('.Regform')];
+        let forms = [...document.querySelectorAll('.SecondRegform')];
 
         forms.map(form => {
             let steps = [...form.querySelectorAll('.form-wrapper')];
@@ -226,7 +226,7 @@ export default class Regform extends Component {
 
         if (this.props.step <= 3) {
             return (
-                <div className={"Regform " + (this.props.class ? this.props.class : '')} ref={this.setTextInputRef}>
+                <div className={"SecondRegform " + (this.props.class ? this.props.class : '')} ref={this.setTextInputRef}>
                     <img src={logo} alt="logo" className="logo"/>
                     <div className='inner'>
                         <div className='form-wrapper one'>
@@ -285,7 +285,7 @@ export default class Regform extends Component {
             )
         }else {
             return (
-                <div className={"Regform " + (this.props.class ? this.props.class : '')} ref={this.setTextInputRef}>
+                <div className={"SecondRegform " + (this.props.class ? this.props.class : '')} ref={this.setTextInputRef}>
                     <img src={logo} alt="lodaing" className="loading"/>
                 </div>
             )

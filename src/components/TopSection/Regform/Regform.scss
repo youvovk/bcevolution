@@ -1,14 +1,13 @@
-.Regform {
+.Regform, .FirstRegform {
     position: relative;
 
     .logo {
         width: 100%;
+        margin-bottom: 15px;
     }
 
     & .inner {
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
+        height: 100%;
     }
 
 
@@ -33,21 +32,6 @@
 
     & .forw-wrapper_input {
         position: relative;
-        .show-pass, .hide-pass {
-            position: absolute;
-            top: 50%;
-            background: url("./visibility.png") no-repeat center;
-            background-size: contain;
-            height: 16px;
-            width: 16px;
-            margin-top: -8px;
-            right: 15px;
-            cursor: pointer;
-        }
-        .hide-pass {
-            background: url("./eye.png") no-repeat center;
-            background-size: contain;
-        }
     }
 
     & .req {
@@ -178,7 +162,7 @@
     .inputfield {
         display: block;
         height: 60px;
-        margin-bottom: 7px;
+        margin-bottom: 15px;
         border-radius: 100px;
         width: 100%;
         padding: 8px 12px;
@@ -189,7 +173,6 @@
         border: 1px solid #cccccc;
         transition: .3s ease;
         text-align: center;
-
         &::placeholder {
             color: #ccc;
         }
@@ -346,6 +329,7 @@
         vertical-align: middle;
         cursor: pointer;
         border: 1px solid transparent;
+        margin-bottom: 10px;
 
         &:hover {
             color: #ffffff;
