@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 import LpFramework, {LpFrameworkWrapper} from '../lp-framework/dist/index'
 import './index.scss';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <LpFramework
-        resourceFile={require('./languages.json')}
-        funnel_name={"test"}>
-        <LpFrameworkWrapper Component={App}/>
-    </LpFramework>,
+    <BrowserRouter>
+        <LpFramework
+            resourceFile={require('./languages.json')}
+            funnel_name={"test"}>
+            <LpFrameworkWrapper Component={App}/>
+        </LpFramework>
+    </BrowserRouter>,
     document.getElementById('root')
 );
 

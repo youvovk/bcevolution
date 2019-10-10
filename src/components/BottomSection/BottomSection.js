@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import logo from './footer-logo.png'
 
 export default class BottomSection extends Component {
     render() {
