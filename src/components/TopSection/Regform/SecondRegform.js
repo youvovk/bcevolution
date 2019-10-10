@@ -35,15 +35,6 @@ export default class SecondRegform extends Component {
         this.handleSync = this.handleSync.bind(this);
     }
 
-    handleClick = (e) => {
-
-        const input = e.target.getAttribute('data-type');
-        this.setState((state) => ({
-            [input] : state[input] === 'password' ? 'text' : 'password'
-        }));
-
-    };
-
     handleSelectFlag = (num, country) => {
 
         this.setState({

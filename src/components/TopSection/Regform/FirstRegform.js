@@ -1,13 +1,62 @@
 import React, { Component } from 'react'
 import logo from '../../BottomSection/logo.png'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
+import { createBrowserHistory } from "history";
 
 
-export default class FirstRegform extends Component {
+class FirstRegform extends Component {
     constructor(props) {
         super(props);
 
+        this.state= {
+            errors: {}
+        }
     }
+
+    emailValidate = (value) => {
+        return !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    };
+
+    nameValidate = (value) => {
+        return !/^([^0-9]*)$/.test(value);
+    };
+
+    saveData = (e) => {
+        e.preventDefault();
+
+        let form = e.target.parentElement;
+        let firstName = form.querySelector('.fname').value;
+        let email = form.querySelector('.email').value;
+
+        console.log(firstName);
+        console.log(email);
+
+        if(firstName.length === 0) {
+            this.setState({
+                errors: ['Enter Name']
+            });
+            return this.state.errors
+        }else if(!this.nameValidate(firstName)) {
+            this.setState({
+                errors: ['Please enter first name without digits']
+            });
+            return this.state.errors
+        } else if(email.length === 0) {
+            this.setState({
+                errors: ['Enter Email']
+            });
+            return this.state.errors
+        } else if(!this.emailValidate(email)) {
+            this.setState({
+                errors: ['Invalid email format']
+            });
+            return this.state.errors
+        } else {
+            this.props.history.push('/members');
+        }
+
+    };
+
     render() {
 
         let languageManager = this.props.languageManager();
@@ -17,16 +66,16 @@ export default class FirstRegform extends Component {
                 <img src={logo} alt="logo" className="logo"/>
                 <div className='inner'>
                     <div className='form-wrapper'>
-                        {/*{this.state.errors && <div className="errors">
+                        {this.state.errors && <div className="errors">
                                 {this.state.errors[0]}
-                            </div>}*/}
-                        <input className="inputfield fname" type="text" name="first_name" placeholder={languageManager.fname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
-                        <input className="inputfield email" type="text" name="email" placeholder={languageManager.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
-                        {/*<button onClick={this.handleForward} className='start'>{languageManager.button}</button>*/}
-                        <Link to="/members" onClick={this.handleForward} className='start'>{languageManager.button}</Link>
+                            </div>}
+                        <input className="inputfield fname" type="text" name="first_name" placeholder={languageManager.fname}/>
+                        <input className="inputfield email" type="text" name="email" placeholder={languageManager.email} autoComplete='off'/>
+                        <Link to="/members" onClick={this.saveData} className='start'>{languageManager.button}</Link>
                     </div>
                 </div>
             </div>
         )
     }
 }
+export default withRouter(FirstRegform);

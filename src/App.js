@@ -3,12 +3,9 @@ import ReactQueryParams from 'react-query-params'
 import MainPage from './components/MainPage'
 import SecondPage from './components/SecondPage'
 import { Route, Switch } from 'react-router-dom'
-import MidSection from './components/MidSection/MidSection'
-import BottomSection from './components/BottomSection/BottomSection'
 import Page from './pages/Page'
 // Pages
 import * as Pages from './pages'
-import TopSection from "./components/TopSection/TopSection";
 
 export default class App extends ReactQueryParams {
     constructor(props) {
@@ -66,23 +63,11 @@ export default class App extends ReactQueryParams {
             return (
                 <div className='App'>
                     <Switch>
-                        <Route exact path="/" render={()=>
-                            <MainPage countryCode={this.props.countryCode}
-                                      handleStep={this.props.handleStep}
-                                      handleSubmit={this.props.handleSubmit}
-                                      pageHandler={this.pageHandler}
-                                      handleForward={this.props.handleForward}
-                                      languageManager={this.props.languageManager}
-                                      validateParams={this.props.validateParams}/>}
+                        <Route exact path="/" render={(routeProps) =>
+                            <MainPage {...this.props} {...routeProps}/>}
                         />
-                        <Route path="/members" render={()=>
-                            <SecondPage countryCode={this.props.countryCode}
-                                      handleStep={this.props.handleStep}
-                                      handleSubmit={this.props.handleSubmit}
-                                      pageHandler={this.pageHandler}
-                                      handleForward={this.props.handleForward}
-                                      languageManager={this.props.languageManager}
-                                      validateParams={this.props.validateParams}/>}
+                        <Route path="/members" render={(routeProps) =>
+                            <SecondPage {...this.props} {...routeProps}/>}
                         />
                     </Switch>
                 </div>
