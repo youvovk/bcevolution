@@ -4,22 +4,25 @@ import MainPage from './components/MainPage'
 import SecondPage from './components/SecondPage'
 import { Route, Switch } from 'react-router-dom'
 import Page from './pages/Page'
+import {UserContext, users} from './helpers/dataContext';
 // Pages
 import * as Pages from './pages'
+
 
 export default class App extends ReactQueryParams {
     constructor(props) {
         super(props);
 
-        this.state = {
-            step: 1,
-            page: 'main',
-        };
-
         this.handleStep = this.handleStep.bind(this);
         this.pageHandler = this.pageHandler.bind(this);
         this.handleForward = this.handleForward.bind(this);
     }
+    state = {
+        step: 1,
+        page: 'main',
+        firstName: 'test',
+        email: 'test@test.com'
+    };
 
     handleStep = (step) => {
         this.setState({step})
@@ -63,12 +66,17 @@ export default class App extends ReactQueryParams {
             return (
                 <div className='App'>
                     <Switch>
-                        <Route exact path="/" render={(routeProps) =>
-                            <MainPage {...this.props} {...routeProps}/>}
-                        />
-                        <Route path="/members" render={(routeProps) =>
-                            <SecondPage {...this.props} {...routeProps}/>}
-                        />
+                        <UserContext.Provider value={{
+                            firstName: this.state.firstName,
+                            email: this.state.email
+                        }}>
+                            <Route exact path="/" render={(routeProps) =>
+                                <MainPage {...this.props} {...routeProps}/>}
+                            />
+                            <Route path="/members" render={(routeProps) =>
+                                <SecondPage {...this.props} {...routeProps}/>}
+                            />
+                        </UserContext.Provider>
                     </Switch>
                 </div>
             )
