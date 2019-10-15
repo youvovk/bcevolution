@@ -11,27 +11,21 @@ export default class SecondRegform extends Component {
         super(props);
 
         this.state = {
-            first_name: "",
+            first_name: '',
             last_name: "",
-            email: "",
+            email: '',
             check: false,
             password: "",
-            confirm_password: "",
             phone_country_prefix: "",
             tel: "",
             agree_1: true,
             agree_2: true,
-            firstPassType: 'password',
-            secondPassType: 'password',
             errorIndexes: [0,1,2,3]
         };
 
-        this.handleBackwards = this.handleBackwards.bind(this);
-        this.handleSync = this.handleSync.bind(this);
     }
 
     handleSelectFlag = (num, country) => {
-
         this.setState({
             phone_country_prefix: '+' + `${country.dialCode}`
         })
@@ -46,25 +40,78 @@ export default class SecondRegform extends Component {
 
     phoneValidate = (value) => {
         return !/[^0-9\-\/]/.test(value);
-    }
+    };
+
+    nameValidate = (value) => {
+        return !/^([^0-9]*)$/.test(value);
+    };
 
     handleForward = (e) => {
+        console.log(this.props);
         let form = e.target.parentElement;
-        let paramsToValidate = {};
+        let paramsToValidate = {
+            email: this.state.email,
+            first_name: this.state.first_name,
+            last_name: this.state.last_name,
+            password: this.state.password,
+            agree_2: this.state.agree_2
+        };
 
-        // Step 1
+        let tel = form.querySelector('.tel');
+        let phone_number = tel.value;
+
+
+        if (!this.phoneValidate(phone_number)) {
+            this.setState({
+                errors: ['Enter only number']
+            });
+            return this.state.errors
+        }
+        else if (phone_number.length > 3) {
+            paramsToValidate = {
+                phone_number: phone_number,
+                phone_country_prefix: this.state.phone_country_prefix
+            };
+
+            let submitResponse = this.props.validateParams(paramsToValidate);
+            if (submitResponse.success) {
+                this.props.handleSubmit(paramsToValidate);
+            }
+            else{
+                this.setState({
+                    errors: submitResponse.errors
+                })
+            }
+        }else {
+            this.setState({
+                errors: ['Enter phone number']
+            });
+            return this.state.errors
+        }
+        let submitResponse = this.props.validateParams(paramsToValidate);
+
+        if (submitResponse.success) {
+            this.props.handleSubmit(paramsToValidate);
+        }
+        else{
+            this.setState({
+                errors: submitResponse.errors
+            })
+        }
+
+        /*// Step 1
         if(this.props.step === 1){
             paramsToValidate = {
-                email: this.state.email,
-                first_name: this.state.first_name,
+                email: this.context.email,
+                first_name: this.context.firstName,
                 last_name: this.state.last_name,
+                password: this.state.password,
                 agree_2: this.state.agree_2
             };
             let submitResponse = this.props.validateParams(paramsToValidate);
 
             if (submitResponse.success) {
                 this.props.handleForward(paramsToValidate);
-                this.props.handleStep(this.props.step + 1);
             }
             else{
                 this.setState({
@@ -86,7 +133,6 @@ export default class SecondRegform extends Component {
             }
 
             let submitResponse = this.props.validateParams(paramsToValidate);
-            console.log(this.props)
 
             if (submitResponse.success) {
                 this.props.handleForward(paramsToValidate);
@@ -132,51 +178,39 @@ export default class SecondRegform extends Component {
                 });
                 return this.state.errors
             }
-        }
+        }*/
     };
 
-    handleBackwards(e) {
-        e.preventDefault();
-        let back = parseInt(e.target.getAttribute('index'));
-        let forms = [...document.querySelectorAll('.SecondRegform')];
-
-        forms.map(form => {
-            let steps = [...form.querySelectorAll('.form-wrapper')];
-            steps.map((step, index) => {
-                for (let i=0;i<=back;i++) {
-                    step.classList.remove('step');
-                }
-            })
-        });
-
-        this.props.handleStep(parseInt(e.target.getAttribute('index')));
-    }
-
-    handleSync(e) {
-        let input = e.target.value;
-        let inputClass = e.target.className;
-        let forms = [...document.querySelectorAll('.SecondRegform')];
-
-        forms.map(form => {
-            form.getElementsByClassName(inputClass)[0].value = input;
-        })
-    }
-
     componentDidUpdate() {
-        let forms = [...document.querySelectorAll('.SecondRegform')];
 
-        forms.map(form => {
-            let steps = [...form.querySelectorAll('.form-wrapper')];
-            steps.map((step, index) => {
-                if (index+1 === this.props.step-1) {
-                    step.classList.add('step');
-                }
-            })
-        })
     }
 
     handleStepChange = (name, value) => {
-        let errors = null;
+        if (name === 'first_name') {
+            let firstNameValue = value;
+            if (this.nameValidate(firstNameValue)) {
+                this.setState({
+                    errors: ['Please enter name without digits']
+                });
+                return this.state.errors
+            } else {
+                this.setState({first_name: firstNameValue});
+            }
+        } else if (name === 'last_name') {
+            let SecondNameValue = value;
+            if (this.nameValidate(SecondNameValue)) {
+                this.setState({
+                    errors: ['Please enter name without digits']
+                });
+                return this.state.errors
+            } else {
+                this.setState({last_name: SecondNameValue});
+            }
+        } else if (name === 'password') {
+            let passwordValue = value;
+            this.setState({password: passwordValue});
+        }
+        /*let errors = null;
         if (name === 'password') {
             const submitResponse = this.props.validateParams({
                 password: value
@@ -199,13 +233,12 @@ export default class SecondRegform extends Component {
             }, []);
 
             this.setState({ errorIndexes });
-        }
-        this.setState({[name]: value, errors});
-
+        }*/
     };
 
 
     render() {
+        console.log(this.props.onSubmit);
 
         let languageManager = this.props.languageManager();
 

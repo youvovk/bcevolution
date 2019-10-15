@@ -22,8 +22,6 @@ class FirstRegform extends Component {
         return !/^([^0-9]*)$/.test(value);
     };
 
-
-
     saveData = (e) => {
         e.preventDefault();
 

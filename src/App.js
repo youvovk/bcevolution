@@ -10,13 +10,6 @@ import * as Pages from './pages'
 
 
 export default class App extends ReactQueryParams {
-    constructor(props) {
-        super(props);
-
-        this.handleStep = this.handleStep.bind(this);
-        this.pageHandler = this.pageHandler.bind(this);
-        this.handleForward = this.handleForward.bind(this);
-    }
     state = {
         step: 1,
         page: 'main',
@@ -65,7 +58,6 @@ export default class App extends ReactQueryParams {
     }
 
     render() {
-
         if (this.state.page === 'main') {
             return (
                 <div className='App'>
