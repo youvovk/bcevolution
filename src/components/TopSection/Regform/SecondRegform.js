@@ -227,7 +227,7 @@ export default class SecondRegform extends Component {
                                         <input className="inputfield lname small-input" type="text" name="last_name" placeholder={languageManager.lname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
                                     </div>
                                 </div>
-                                <input className="inputfield email small-input" type="text" name="email" placeholder={languageManager.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
+                                <input className="inputfield email small-input" type="text" name="email" placeholder={languageManager.email} defaultValue={context.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
                                 <input className="inputfield pass small-input" type="password" maxLength="8" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="password" placeholder={languageManager.pass}/>
                                 <img src={hint} alt="hint" className="hint"/>
                                 <IntlTelInput

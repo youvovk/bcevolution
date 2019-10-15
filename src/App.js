@@ -4,7 +4,7 @@ import MainPage from './components/MainPage'
 import SecondPage from './components/SecondPage'
 import { Route, Switch } from 'react-router-dom'
 import Page from './pages/Page'
-import {UserContext, users} from './helpers/dataContext';
+import {UserContext} from './helpers/dataContext';
 // Pages
 import * as Pages from './pages'
 
@@ -20,8 +20,8 @@ export default class App extends ReactQueryParams {
     state = {
         step: 1,
         page: 'main',
-        firstName: 'test',
-        email: 'test@test.com'
+        firstName: '',
+        email: ''
     };
 
     handleStep = (step) => {
@@ -35,6 +35,10 @@ export default class App extends ReactQueryParams {
     handleSubmit = (params) => {
         this.props.onSubmit(params)
         .then(() => this.setState({ step: 1 }))
+    };
+
+    getValueFromInputs = e => {
+        this.setState({ [e.target.name] : e.target.value});
     };
 
     pageHandler(page) {
@@ -68,7 +72,8 @@ export default class App extends ReactQueryParams {
                     <Switch>
                         <UserContext.Provider value={{
                             firstName: this.state.firstName,
-                            email: this.state.email
+                            email: this.state.email,
+                            getValueFromInputs: this.getValueFromInputs
                         }}>
                             <Route exact path="/" render={(routeProps) =>
                                 <MainPage {...this.props} {...routeProps}/>}
