@@ -25,7 +25,6 @@ class FirstRegform extends Component {
     saveData = (e) => {
         e.preventDefault();
 
-        console.log(this.context);
         let form = e.target.parentElement;
         let firstName = form.querySelector('.fname').value.trim();
         let email = form.querySelector('.email').value.trim();

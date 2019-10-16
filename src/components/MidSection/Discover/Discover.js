@@ -23,7 +23,7 @@ export default class Discover extends Component {
                         {
                             languageManager.discover_descriptions.slice(0, 4).map((item, index) => {
                                 return (
-                                    <div className="col-lg-3 news-main-box" key={index}>
+                                    <div className="col-lg-3 col-md-3 news-main-box" key={index}>
                                         <div className={"news-box news"+(index + 1)}>
                                             <p className="news-box-text">{item.text}</p>
                                             <a href="#" className="news-box-link">{item.link}</a>

@@ -10,6 +10,9 @@
         letter-spacing: 5px;
         text-transform: uppercase;
         margin-bottom: 40px;
+        @media (max-width: 991px) {
+            font-size: 27px;
+        }
     }
 
     .news-main-box {
@@ -58,6 +61,13 @@
             line-height: 25px;
             text-align: left;
             min-width: 412px;
+            @media (max-width: 1720px) {
+                min-width: auto;
+            }
+            @media (max-width: 991px) {
+                font-size: 15px;
+                line-height: 19px;
+            }
         }
         .news-box-link {
             color: #fff;

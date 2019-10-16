@@ -77,7 +77,7 @@ export default class Review extends Component {
                                                         return (
                                                             <div className="border-block" key={index}>
                                                                 <div className="row">
-                                                                    <div className="col-lg-7 information">
+                                                                    <div className="col-lg-7 col-md-7 information">
                                                                         <div className="author">
                                                                             <img src={this.state.images[item.avatar]} alt={item.avatar}/>
                                                                             <div className="author-info">
@@ -87,7 +87,7 @@ export default class Review extends Component {
                                                                         </div>
                                                                         <p className="description">{item.text}</p>
                                                                     </div>
-                                                                    <div className="col-lg-5 img-block">
+                                                                    <div className="col-lg-5 col-md-5 img-block">
                                                                         <img src={this.state.images[item.picture]} alt=""/>
                                                                     </div>
                                                                 </div>
@@ -102,7 +102,7 @@ export default class Review extends Component {
                                                         return (
                                                             <div className="border-block" key={index}>
                                                                 <div className="row">
-                                                                    <div className="col-lg-7 information">
+                                                                    <div className="col-lg-7 col-md-7 information">
                                                                         <div className="author">
                                                                             <img src={this.state.images[item.avatar]} alt={item.avatar}/>
                                                                             <div className="author-info">
@@ -112,7 +112,7 @@ export default class Review extends Component {
                                                                         </div>
                                                                         <p className="description">{item.text}</p>
                                                                     </div>
-                                                                    <div className="col-lg-5 img-block">
+                                                                    <div className="col-lg-5 col-md-5 img-block">
                                                                         <img src={this.state.images[item.picture]} alt=""/>
                                                                     </div>
                                                                 </div>

@@ -27,7 +27,7 @@ export default class MoreNews extends Component {
                         {
                             languageManager.more_news_description.slice(0, 2).map((item, index) => {
                                 return (
-                                    <div className="col-lg-6 more-news_description" key={index}>
+                                    <div className="col-lg-6 col-md-6 more-news_description" key={index}>
                                         <img src={this.state.images[item.img]} alt=""/>
                                         <h3 className="more-news_text">{item.title}</h3>
                                         <p className="more-news_text">{item.description}</p>

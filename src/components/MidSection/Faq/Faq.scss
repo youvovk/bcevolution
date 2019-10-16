@@ -1,6 +1,9 @@
 .Faq {
 	padding: 70px 0;
 	background: #edeff2;
+	@media (max-width: 767px) {
+		padding: 30px 10px;
+	}
 	.faq-title {
 		margin-bottom: 17px;
 		font-size: 39px;

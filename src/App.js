@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 import ReactQueryParams from 'react-query-params'
 import MainPage from './components/MainPage'
 import SecondPage from './components/SecondPage'
-import { Route, Switch } from 'react-router-dom'
+import {Route, Switch, withRouter} from 'react-router-dom'
 import Page from './pages/Page'
 import {UserContext} from './helpers/dataContext';
 // Pages
 import * as Pages from './pages'
 
 
-export default class App extends ReactQueryParams {
+class App extends ReactQueryParams {
     state = {
-        step: 1,
         page: 'main',
         firstName: '',
         email: ''
@@ -27,7 +26,7 @@ export default class App extends ReactQueryParams {
 
     handleSubmit = (params) => {
         this.props.onSubmit(params)
-        .then(() => this.setState({ step: 1 }))
+        .then(() =>  this.props.history.push('/'))
     };
 
     getValueFromInputs = e => {
@@ -94,3 +93,4 @@ export default class App extends ReactQueryParams {
         }
     }
 }
+export default withRouter(App);

@@ -3,12 +3,22 @@
     padding: 80px 10px;
     background-color: #fff;
     text-align: center;
+    @media (max-width: 575px) {
+        padding: 20px 0;
+    }
     .subtitle {
         margin-bottom: 14px;
         color: #8e8e9c;
         font-size: 18px;
         font-weight: 300;
         text-align: center;
+        @media (max-width: 575px) {
+            font-size: 11px;
+            line-height: 24px;
+            letter-spacing: 0px;
+            text-transform: none;
+            margin-bottom: 2px;
+        }
     }
     & .border-block {
         padding: 15px 8px;
@@ -35,6 +45,10 @@
             text-transform: uppercase;
             text-align: center;
             color: #676770;
+            @media (max-width: 575px) {
+                font-size: 19px;
+                line-height: 21px;
+            }
         }
         .border-block_description {
             color: #6a859c;

@@ -15,7 +15,7 @@ export default class Advantage extends Component {
 								<p className="subtitle">{languageManager.first_information_block[0]}</p>
 								<p className="subtitle">{languageManager.first_information_block[1]}</p>
 							</div>
-							<div className="col-lg-6">
+							<div className="col-lg-6 col-md-6">
 								<div className="border-block">
 									<div className="border-block_description">
 										<img src={bitIcon} alt="bitcoin"/>
@@ -24,7 +24,7 @@ export default class Advantage extends Component {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-6">
+							<div className="col-lg-6 col-md-6">
 								<div className="border-block">
 									<div className="border-block_description">
 										<img src={memberIcon} alt="bitcoin"/>

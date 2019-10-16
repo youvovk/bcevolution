@@ -15,6 +15,7 @@
         .links {
             display: flex;
             justify-content: center;
+            flex-flow: row wrap;
             margin-bottom: 10px;
             a {
                 color: #fff;

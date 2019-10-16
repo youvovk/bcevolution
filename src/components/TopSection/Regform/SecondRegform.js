@@ -25,13 +25,6 @@ export default class SecondRegform extends Component {
         errorIndexes: [0,1,2,3]
     };
 
-   /* handleSelectFlag = (num, country) => {
-        this.setState({
-            phone_country_prefix: '+' + `${country.dialCode}`
-        })
-
-    };*/
-
     phoneNumberBlur = (status, value, countryData) => {
         let phone_number = value;
         if (!this.phoneValidate(phone_number)) {
@@ -41,12 +34,10 @@ export default class SecondRegform extends Component {
             return this.state.errors;
         }
         else if (phone_number.length > 3) {
-            console.log(true);
             this.setState({
                 phone_number: phone_number,
                 phone_country_prefix: '+' + `${countryData.dialCode}`
             });
-            console.log(this.state.phone_number);
         }
         else {
             this.setState({
