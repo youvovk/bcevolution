@@ -73,6 +73,8 @@
             text-transform: uppercase;
             font-size: 16px;
             transition: all .3s ease;
+            background: transparent;
+            outline: none;
             &:hover {
                 border:1px solid #2e9dff;
                 color: #2e9dff;
@@ -80,4 +82,21 @@
             }
         }
     }
+}
+.modal-dialog {
+    max-width: 400px;
+    margin: 0;
+    padding: 25px;
+    border: 3px solid #e2a62b;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.modal-content {
+    border: none;
+}
+.modal {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0!important;
 }

@@ -19,6 +19,20 @@
         height: 100%;
     }
 
+    .title {
+        p {
+            color: #3c3d3d;
+            font-size: 17px;
+            line-height: 27px;
+            text-align: center;
+            margin-bottom: 0;
+            font-weight: 700;
+            span {
+                color: #e2a62b;
+            }
+        }
+    }
+
 
     & .form-wrapper {
         overflow: hidden;

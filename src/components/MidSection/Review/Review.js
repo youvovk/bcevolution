@@ -1,10 +1,6 @@
 import React, {Component} from 'react'
 import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
-import TabContainer from 'react-bootstrap/TabContainer'
-import TabContent from 'react-bootstrap/TabContent'
-import TabPane from 'react-bootstrap/TabPane'
-import NavItem from "react-bootstrap/esm/NavItem";
 import estella from './images/test1231.jpg'
 import snapbag from './images/snapbag.jpeg'
 import yacht from './images/me-p-500.jpeg'

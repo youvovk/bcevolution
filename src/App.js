@@ -33,7 +33,7 @@ class App extends ReactQueryParams {
         this.setState({ [e.target.name] : e.target.value});
     };
 
-    pageHandler(page) {
+    pageHandler = (page) => {
         window.scrollTo(0, 0);
 
         switch (page) {
@@ -54,7 +54,7 @@ class App extends ReactQueryParams {
                 break;
         }
 
-    }
+    };
 
     render() {
         if (this.state.page === 'main') {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactQueryParams from 'react-query-params'
 import TopSection from './TopSection/TopSection'
 import MidSection from './MidSection/MidSection'
 import BottomSection from './BottomSection/BottomSection'
