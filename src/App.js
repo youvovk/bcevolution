@@ -67,11 +67,21 @@ export default class App extends ReactQueryParams {
                             email: this.state.email,
                             getValueFromInputs: this.getValueFromInputs
                         }}>
-                            <Route exact path="/" render={(routeProps) =>
-                                <MainPage {...this.props} {...routeProps}/>}
+                            <Route exact path="/" render={() =>
+                                <MainPage countryCode={this.props.countryCode}
+                                          handleStep={this.handleStep} step={this.state.step} handleSubmit={this.handleSubmit}
+                                          pageHandler={this.pageHandler}
+                                          handleForward={this.handleForward}
+                                          languageManager={this.props.languageManager}
+                                          validateParams={this.props.validateParams}/>}
                             />
-                            <Route path="/members" render={(routeProps) =>
-                                <SecondPage {...this.props} {...routeProps}/>}
+                            <Route path="/members" render={() =>
+                                <SecondPage countryCode={this.props.countryCode}
+                                            handleStep={this.handleStep} step={this.state.step} handleSubmit={this.handleSubmit}
+                                            pageHandler={this.pageHandler}
+                                            handleForward={this.handleForward}
+                                            languageManager={this.props.languageManager}
+                                            validateParams={this.props.validateParams}/>}
                             />
                         </UserContext.Provider>
                     </Switch>

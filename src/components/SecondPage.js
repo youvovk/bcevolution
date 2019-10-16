@@ -7,14 +7,13 @@ import BottomSection from './BottomSection/BottomSection'
 export default class SecondPage extends Component {
 
     render() {
-        console.log(this.props)
 
         return (
             <div className='MainPage'>
                 <SecondTopSection
                     countryCode={this.props.countryCode}
                     handleStep={this.props.handleStep}
-                    handleSubmit={this.props.onSubmit}
+                    handleSubmit={this.props.handleSubmit}
                     pageHandler={this.props.pageHandler}
                     handleForward={this.props.handleForward}
                     languageManager={this.props.languageManager}
