@@ -3,6 +3,7 @@ import bitimg from './img/bitimg.jpg'
 import bitimg2 from './img/bitimg2.jpg'
 import Modal from 'react-bootstrap/Modal'
 import ModalForm from "../../TopSection/Regform/ModalForm";
+import {AnimatedOnScroll} from "react-animated-css-onscroll";
 
 export default class MoreNews extends Component {
     constructor(props) {
@@ -32,13 +33,17 @@ export default class MoreNews extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12">
-                            <h2>{languageManager.more_news_title}</h2>
+                            <AnimatedOnScroll animationIn="fadeInDown">
+                                <h2>{languageManager.more_news_title}</h2>
+                            </AnimatedOnScroll>
                         </div>
                         {
                             languageManager.more_news_description.slice(0, 2).map((item, index) => {
                                 return (
                                     <div className="col-lg-6 col-md-6 more-news_description" key={index}>
-                                        <img src={this.state.images[item.img]} alt=""/>
+                                        <AnimatedOnScroll animationIn="zoomIn">
+                                            <img src={this.state.images[item.img]} alt=""/>
+                                        </AnimatedOnScroll>
                                         <h3 className="more-news_text">{item.title}</h3>
                                         <p className="more-news_text">{item.description}</p>
                                         <button onClick={this.handleShow} className="link">{item.link}</button>
