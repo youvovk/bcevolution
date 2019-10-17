@@ -41,6 +41,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
+        width: 100%;
         .nav-link {
             padding: 12px 30px;
             border-radius: 4px;
@@ -60,14 +61,14 @@
                 color: #23527c;
                 text-decoration: underline;
             }
-            &:focus {
-                background-color: #e9d600;
-            }
             @media (max-width: 575px) {
                 font-size: 12px;
                 margin: 0 3px;
                 padding: 12px 15px;
             }
+        }
+        .active {
+            background-color: #e9d600;
         }
     }
     .author {
