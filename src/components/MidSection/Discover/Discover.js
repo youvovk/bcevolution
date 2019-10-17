@@ -1,11 +1,36 @@
 import React, {Component} from 'react'
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+import first from './img/first.png'
+import second from './img/second.png'
+import third from './img/third.jpg'
+import fours from './img/fours.jpg'
 
 
 export default class Discover extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            photoIndex: 0,
+            isOpen: false,
+            images: [
+                first,
+                second,
+                third,
+                fours
+            ]
+        };
     }
+
+    openLigthbox = (e) => {
+        this.setState({
+            isOpen: true,
+            photoIndex: e.target.getAttribute('data-index')
+        })
+    }
+
+
     render() {
         let languageManager = this.props.languageManager();
 
@@ -26,7 +51,7 @@ export default class Discover extends Component {
                                     <div className="col-lg-3 col-md-3 news-main-box" key={index}>
                                         <div className={"news-box news"+(index + 1)}>
                                             <p className="news-box-text">{item.text}</p>
-                                            <a href="#" className="news-box-link">{item.link}</a>
+                                            <button data-index={index} onClick={this.openLigthbox} className="news-box-link">{item.link}</button>
                                         </div>
                                     </div>
                                 )
@@ -34,6 +59,11 @@ export default class Discover extends Component {
                         }
                     </div>
                 </div>
+                {this.state.isOpen && (
+                    <Lightbox
+                        mainSrc={this.state.images[this.state.photoIndex]}
+                        onCloseRequest={() => this.setState({ isOpen: false })}
+                    />)}
             </div>
         )
     }

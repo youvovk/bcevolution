@@ -55,11 +55,11 @@ export default class Review extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                        <Tab.Container id="tabs" defaultActiveKey="first">
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-12">
-                                        <Nav.Item>
+                                        <Nav.Item variant="pills">
                                             <Nav.Link eventKey="first">Page 1</Nav.Link>
                                             <Nav.Link eventKey="second">Page 2</Nav.Link>
                                             <Nav.Link eventKey="third">Page 3</Nav.Link>

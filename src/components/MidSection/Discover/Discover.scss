@@ -74,9 +74,15 @@
             font-size: 13px;
             text-decoration: none;
             display: inline-block;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
             border-bottom: 1px solid transparent;
             margin-top: 10px;
             transition: .3s ease;
+            background: transparent;
+            outline: none;
+            cursor: pointer;
             &:hover {
                 color: #e9d600;
                 border-bottom: 1px solid #23527c;
