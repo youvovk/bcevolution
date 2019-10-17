@@ -38,7 +38,12 @@
     }
 
     & .innersection {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         border-bottom: 1px solid rgb(240, 240, 240);
 
@@ -50,7 +55,7 @@
             @media (max-width: 1200px) {
                 width: 80%;
             }
-    
+
             @media (max-width: 768px) {
                 margin: 6vw auto;
                 width: 90%;
@@ -64,7 +69,7 @@
                 @media (max-width: 1200px) {
                     font-size: 3vw;
                 }
-        
+
                 @media (max-width: 768px) {
                     font-size: 8.86vw;
                 }
@@ -79,7 +84,7 @@
                 @media (max-width: 1200px) {
                     font-size: 2vw;
                 }
-        
+
                 @media (max-width: 768px) {
                     width: 80%;
                     font-size: 4.86vw;
@@ -98,50 +103,82 @@
         }
 
         .rows {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
 
             & .top, .bottom {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
                 flex-direction: row;
+                -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
                 justify-content: space-evenly;
 
                 @media (max-width: 768px) {
                     margin: auto;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
                     flex-direction: column;
                 }
 
                 & .item {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
                     flex-direction: row;
                     height: 13vw;
                     max-width: 30%;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
                     justify-content: space-between;
 
                     @media (max-width: 1200px) {
                         height: 18vw;
                     }
-            
+
                     @media (max-width: 768px) {
                         max-width: 100%;
                         height: auto;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
                         justify-content: space-between;
                         margin: 2vw auto;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
                         flex-direction: column;
                     }
 
                     & .column {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
                         display: flex;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
                         flex-direction: column;
                         max-width: 75%;
                         text-align: left;
-                        
-                
+
+
                         @media (max-width: 768px) {
                             max-width: 90%;
                             margin: auto;
                         }
-    
+
                         & .qindex {
                             text-align: center;
                             width: 3.4vw;
@@ -158,7 +195,7 @@
                                 height: 4.4vw;
                                 font-size: 1.92vw;
                             }
-                    
+
                             @media (max-width: 768px) {
                                 width: 16.4vw;
                                 height: 16.4vw;
@@ -166,7 +203,7 @@
                             }
                         }
 
-                        
+
                         & .aindex {
                             text-align: center;
                             margin: 0.4vw 0;
@@ -184,7 +221,7 @@
                                 height: 3.2vw;
                                 font-size: 1.92vw;
                             }
-                    
+
                             @media (max-width: 768px) {
                                 width: 16.4vw;
                                 height: 11.4vw;
@@ -198,13 +235,15 @@
                             font-weight: 500;
                             font-size: 1.04vw;
                             height: 3.4vw;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
                             display: flex;
                             margin-bottom: 0.4vw;
 
                             @media (max-width: 1200px) {
                                 font-size: 1.44vw;
                             }
-                    
+
                             @media (max-width: 768px) {
                                 font-size: 5.04vw;
                                 text-align: left;
@@ -231,7 +270,7 @@
                                 font-size: 1.2vw;
                                 height: 6.4vw;
                             }
-                    
+
                             @media (max-width: 768px) {
                                 font-size: 4.2vw;
                                 height: auto;
@@ -243,20 +282,35 @@
 
                 & .rich {
                     width: 50%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
                     flex-direction: row;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
                     justify-content: space-between;
                     margin: 1.4vw 0;
-            
+
                     @media (max-width: 768px) {
                         width: 80%;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
                         flex-direction: column;
                         margin: 4vw auto;
                         border-bottom: 1px solid rgb(240, 240, 240);
                     }
 
                     & .column {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
                         display: flex;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
                         flex-direction: column;
                         max-width: 75%;
                         text-align: left;
@@ -312,7 +366,7 @@
                             padding-left: 1vw;
                             font-family: 'Open Sans', sans-serif;
                             width: 84%;
-                        
+
                             @media (max-width: 1200px) {
                                 font-size: 1.24vw;
                             }
@@ -327,8 +381,8 @@
             }
 
             & .top {
-                border-bottom: 1px solid rgb(240, 240, 240); 
-            
+                border-bottom: 1px solid rgb(240, 240, 240);
+
                 @media (max-width: 768px) {
                     border: none;
                 }

@@ -1,4 +1,6 @@
 .EarnBlock {
+    background-image: -webkit-gradient(linear, right top, left top, from(#000), to(rgba(0, 0, 0, .25))), url("./img/video-2.jpg");
+    background-image: -o-linear-gradient(right, #000, rgba(0, 0, 0, .25)), url("./img/video-2.jpg");
     background-image: linear-gradient(270deg, #000, rgba(0, 0, 0, .25)), url("./img/video-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;

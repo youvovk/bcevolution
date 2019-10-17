@@ -20,34 +20,53 @@
         .news-box {
             height: 300px;
             padding: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
             justify-content: flex-end;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
             align-items: flex-start;
+            -webkit-transition: all .3s ease;
+            -o-transition: all .3s ease;
             transition: all .3s ease;
             &:hover {
                 padding-left: 12px;
             }
         }
         & .news1 {
+            background-image: url("./img/businessinsider-logo.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .27)), to(rgba(0, 0, 0, .69))), url("./img/crypto-castle-san-francisco-1750.jpg");
+            background-image: url("./img/businessinsider-logo.jpg"), -o-linear-gradient(top, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/crypto-castle-san-francisco-1750.jpg");
             background-image: url("./img/businessinsider-logo.jpg"), linear-gradient(180deg, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/crypto-castle-san-francisco-1750.jpg");
             background-position: 0px 0px, 0px 0px, 50% -36px;
             background-size: 40px, auto, cover;
             background-repeat: no-repeat, repeat, repeat;
         }
         & .news2 {
+            background-image: url("./img/data.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .27)), to(rgba(0, 0, 0, .69))), url("./img/safari.jpg");
+            background-image: url("./img/data.jpg"), -o-linear-gradient(top, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/safari.jpg");
             background-image: url("./img/data.jpg"), linear-gradient(180deg, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/safari.jpg");
             background-position: 0px 0px, 0px 0px, 50% 50%;
             background-size: 40px, auto, cover;
             background-repeat: no-repeat, repeat, no-repeat;
         }
         & .news3 {
+            background-image: url("./img/forvs.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .27)), to(rgba(0, 0, 0, .69))), url("./img/bc.jpg");
+            background-image: url("./img/forvs.png"), -o-linear-gradient(top, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/bc.jpg");
             background-image: url("./img/forvs.png"), linear-gradient(180deg, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/bc.jpg");
             background-position: 0px 0px, 0px 0px, 50% 50%;
             background-size: 40px, auto, cover;
             background-repeat: no-repeat, repeat, no-repeat;
         }
         & .news4 {
+            background-image: url("./img/forvs.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .27)), to(rgba(0, 0, 0, .69))), url("./img/shop.jpg");
+            background-image: url("./img/forvs.png"), -o-linear-gradient(top, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/shop.jpg");
             background-image: url("./img/forvs.png"), linear-gradient(180deg, rgba(0, 0, 0, .27), rgba(0, 0, 0, .69)), url("./img/shop.jpg");
             background-position: 0px 0px, 0px 0px, 50% 50%;
             background-size: 40px, auto, cover;
@@ -79,6 +98,8 @@
             border-right: 0;
             border-bottom: 1px solid transparent;
             margin-top: 10px;
+            -webkit-transition: .3s ease;
+            -o-transition: .3s ease;
             transition: .3s ease;
             background: transparent;
             outline: none;

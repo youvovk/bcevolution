@@ -26,6 +26,8 @@
         border-radius: 5px;
         background: #ffffff;
         margin-top: 24px;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
         transition: all .3s ease;
         &:hover {
             background: #fdfbfb;
@@ -37,6 +39,7 @@
             border: 10px solid #fff;
             border-radius: 50%;
             background-color: #e9d600;
+            -webkit-box-shadow: 0 0 0 1px #9e9204;
             box-shadow: 0 0 0 1px #9e9204;
         }
         .border-block_title {
