@@ -175,6 +175,8 @@
       "This is Your CHANCE to Join",
       "Bitcoin Loophole and ",
       "secure your financial future."
-    ]
+    ],
+    "close_btn": "close",
+    "fixed_block": "Free Subscription Available"
   }
 }

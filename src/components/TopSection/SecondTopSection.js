@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import VideoPlayer from './VideoPlayer/VideoPlayer.js'
 import SecondRegform  from './Regform/SecondRegform'
 import SecondTitle  from './SecondTitle/SecondTitle'
+import Carousel from 'react-bootstrap/Carousel'
 
 import video2 from './members-en.mp4'
 
@@ -10,6 +11,8 @@ import video2 from './members-en.mp4'
 export default class SecondTopSection extends Component {
 
     render() {
+        let languageManager = this.props.languageManager();
+
         return (
             <div className='TopSection'>
                 <SecondTitle languageManager={this.props.languageManager} />
@@ -25,6 +28,24 @@ export default class SecondTopSection extends Component {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="fixed-block">
+                    <div className="numbers">
+                        <Carousel pauseOnHover={false} wrap={false} indicators={false} controls={false}>
+                            <Carousel.Item>
+                                <p>5</p>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <p>4</p>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <p>2</p>
+                            </Carousel.Item>
+                        </Carousel>
+                    </div>
+                    <div className="text-description">
+                        <p>{languageManager.fixed_block}</p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import bitimg from './img/bitimg.jpg'
 import bitimg2 from './img/bitimg2.jpg'
-import {withRouter} from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal'
 import ModalForm from "../../TopSection/Regform/ModalForm";
 
@@ -28,6 +27,7 @@ export default class MoreNews extends Component {
             <div className="MoreNews">
                 <Modal show={this.state.showModal} onHide={this.onHide}>
                     <ModalForm validateParams={this.props.validateParams} form={this.props.form} pageHandler={this.props.pageHandler} countryCode={this.props.countryCode} languageManager={this.props.languageManager} handleStep={this.props.handleStep} handleForward={this.props.handleForward} handleSubmit={this.props.handleSubmit} step={this.props.step} location={this.props.location}/>
+                    <button className="btn-close" onClick={this.onHide}>{languageManager.close_btn}</button>
                 </Modal>
                 <div className="container">
                     <div className="row">
