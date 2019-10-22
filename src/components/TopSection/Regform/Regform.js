@@ -122,9 +122,6 @@ export default class Regform extends Component {
                 };
 
                 let submitResponse = this.props.validateParams(paramsToValidate);
-                //console.log(paramsToValidate)
-                //console.log(this.props.validateParams)
-                //console.log(submitResponse)
                 if (submitResponse.success) {
                     this.props.handleSubmit(paramsToValidate);
                     this.props.handleStep(this.props.step + 1);
