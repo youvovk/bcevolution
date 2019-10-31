@@ -17,7 +17,9 @@ export default class SecondPage extends Component {
                     pageHandler={this.props.pageHandler}
                     handleForward={this.props.handleForward}
                     languageManager={this.props.languageManager}
-                    validateParams={this.props.validateParams}/>
+                    validateParams={this.props.validateParams}
+                    success={this.props.success}
+                />
 
                 <SecondMidSection languageManager={this.props.languageManager}/>
 

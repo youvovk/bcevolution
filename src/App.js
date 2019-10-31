@@ -13,7 +13,8 @@ class App extends ReactQueryParams {
     state = {
         page: 'main',
         firstName: '',
-        email: ''
+        email: '',
+        success: false,
     };
 
     handleStep = (step) => {
@@ -26,7 +27,11 @@ class App extends ReactQueryParams {
 
     handleSubmit = (params) => {
         this.props.onSubmit(params)
-        .then(() =>  this.props.history.push('/'))
+        this.setState({
+            success: true,
+        })
+        //window.history.go(-1);
+        
     };
 
     getValueFromInputs = e => {
@@ -80,7 +85,9 @@ class App extends ReactQueryParams {
                                             pageHandler={this.pageHandler}
                                             handleForward={this.handleForward}
                                             languageManager={this.props.languageManager}
-                                            validateParams={this.props.validateParams}/>}
+                                            validateParams={this.props.validateParams}
+                                            success={this.state.success}
+                                />}
                             />
                         </UserContext.Provider>
                     </Switch>

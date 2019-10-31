@@ -74,6 +74,7 @@ export default class SecondRegform extends Component {
 
         if (submitResponse.success) {
             this.props.handleSubmit(paramsToValidate);
+
         }
         else{
             this.setState({
@@ -136,38 +137,51 @@ export default class SecondRegform extends Component {
 
         let languageManager = this.props.languageManager();
 
-        return (
-            <div className="SecondRegform">
-                <img src={logo} alt="logo" className="logo small"/>
-                <div className='inner'>
-                    <div className='form-wrapper one'>
-                        {/* {this.state.errors && <div className="errors">
-                                {this.state.errors[0]}
-                                    </div>}*/}
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <input className="inputfield fname small-input" type="text" name="first_name" value={this.context.firstName} placeholder={languageManager.fname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
+        if (!this.props.success) {
+            return (
+                <div className="SecondRegform">
+                    <img src={logo} alt="logo" className="logo small"/>
+                    <div className='inner'>
+                        <div className='form-wrapper one'>
+                            {/* {this.state.errors && <div className="errors">
+                                    {this.state.errors[0]}
+                                        </div>}*/}
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <input className="inputfield fname small-input" type="text" name="first_name" value={this.context.firstName} placeholder={languageManager.fname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
+                                </div>
+                                <div className="col-lg-6">
+                                    <input className="inputfield lname small-input" type="text" name="last_name" placeholder={languageManager.lname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
+                                </div>
                             </div>
-                            <div className="col-lg-6">
-                                <input className="inputfield lname small-input" type="text" name="last_name" placeholder={languageManager.lname} onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
-                            </div>
+                            <input className="inputfield email small-input" type="text" name="email" placeholder={languageManager.email} value={this.context.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
+                            <input className="inputfield pass small-input" type="password" maxLength="8" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="password" placeholder={languageManager.pass}/>
+                            <img src={hint} alt="hint" className="hint"/>
+                            <IntlTelInput
+                                preferredCountries={[this.props.countryCode]}
+                                containerClassName="intl-tel-input"
+                                inputClassName="inputfield tel small-input"
+                                autoPlaceholder={true}
+                                separateDialCode={true}
+                                onSelectFlag={this.handleSelectFlag}
+                                onPhoneNumberBlur={this.phoneNumberBlur}
+                            />
+                            <button onClick={this.handleForward} className='start' >{languageManager.button_last}</button>
                         </div>
-                        <input className="inputfield email small-input" type="text" name="email" placeholder={languageManager.email} value={this.context.email} autoComplete='off' onChange={(e) => this.handleStepChange(e.target.name, e.target.value)}/>
-                        <input className="inputfield pass small-input" type="password" maxLength="8" onChange={(e) => this.handleStepChange(e.target.name, e.target.value)} name="password" placeholder={languageManager.pass}/>
-                        <img src={hint} alt="hint" className="hint"/>
-                        <IntlTelInput
-                            preferredCountries={[this.props.countryCode]}
-                            containerClassName="intl-tel-input"
-                            inputClassName="inputfield tel small-input"
-                            autoPlaceholder={true}
-                            separateDialCode={true}
-                            onSelectFlag={this.handleSelectFlag}
-                            onPhoneNumberBlur={this.phoneNumberBlur}
-                        />
-                        <button onClick={this.handleForward} className='start' >{languageManager.button_last}</button>
                     </div>
                 </div>
-            </div>
-        )
-    }
+            )
+        }   else {
+            return (
+                <div className="Regform last-step">
+                    <div className="inner">
+                        <div className='form-wrapper three last-step-logo'>
+                            <img src={logo} className="logo" alt=""/>
+                        </div>
+                    </div>
+                </div>
+
+            )
+        }
+    }  
 }
